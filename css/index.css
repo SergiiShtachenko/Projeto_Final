@@ -1,0 +1,30 @@
+.conteudo{
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: auto;
+}
+
+#userArea{
+    margin-top: 10%;
+    margin-right: 10%;
+}
+
+.imgLogo{
+    max-width: 70%;
+    margin-bottom: 10px;
+}
+
+.campo{
+    margin: 5px 0 5px 0;
+}
+
+.imgTWF{
+    max-width: 40%;
+}
+
+#promoSlider{
+    width: 500 px;
+    height: 750 px;
+}
