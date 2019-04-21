@@ -24,7 +24,6 @@
     max-width: 40%;
 }
 
-#promoSlider{
-    width: 500 px;
-    height: 750 px;
+#error{
+    color: red;
 }

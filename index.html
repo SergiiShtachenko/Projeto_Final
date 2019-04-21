@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>
         <link rel="stylesheet" href="css/index.css">
-        <script src="js/index.js"></script>
+        <script src="js/index.js" defer></script>
 
         <!-- jQuery -->
         <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
     <body>
         <section class="conteudo">
             <article id="userArea">
-                <img class="imgLogo" src="img/logo AMF FC - payoff.jpg" alt="AMF Safety Shoes">
+                <a href="http://www.amfshoes.com/"><img class="imgLogo" src="img/logo AMF FC - payoff.jpg" alt="AMF Safety Shoes"></a>
                 <form name="userAccess" action="" method="POST">
                     <label>Introduza o seu login e a senha:</label>
                     <br>
@@ -40,9 +40,9 @@
                     <br>
                     <input class="campo" class="button" type="submit" value="Login">
                     <br>
-                    <p class="erro"></p> 
+                    <p id="error"></p> 
                 </form>
-                <img class="imgTWF" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor">
+                <a href="https://www.toworkfor.pt"><img class="imgTWF" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
             </article>
             <aside id="promoSlider" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
                 <section class="slides">
