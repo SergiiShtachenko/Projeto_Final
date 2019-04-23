@@ -3,57 +3,50 @@
     <head>
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>
+
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/price.css">
+
         <script src="js/index.js" defer></script>
+        <script src="js/login.js" defer></script>
+        <script src="js/price.js" defer></script>
+
+        <!-- ANGULAR 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>-->
 
         <!-- jQuery -->
         <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
-
         <!-- jQuery UI mouse draggable widget -->
         <script src="http://ma5slider.ma5.pl/js/jquery-ui.min.js"></script>
-
         <!-- Touch Event Support for jQuery UI -->
         <script src="http://ma5slider.ma5.pl/js/jquery.ui.touch-punch.min.js"></script>
-
         <!-- MA5 Slider -->
         <link href="http://ma5slider.ma5.pl/css/ma5slider.min.css" rel="stylesheet" type="text/css">
-        <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>
-        
-        <script>
-            $(window).on('load', function () {
-            $('.ma5slider').ma5slider();
-            });
-        </script>
+        <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>        
+        <script>  $(window).on('load', function () {$('.ma5slider').ma5slider();}); </script>
          <!-- Fim jQuery -->
 
     </head>
-    <body>
-        <section class="conteudo">
-            <article id="userArea">
-                <a href="http://www.amfshoes.com/"><img class="imgLogo" src="img/logo AMF FC - payoff.jpg" alt="AMF Safety Shoes"></a>
-                <form name="userAccess" action="" method="POST">
-                    <label>Introduza o seu login e a senha:</label>
-                    <br>
-                    <input class="campo" type="name"name="user" size="30px" placeholder="nome@mail.pt" required="">
-                    <br>
-                    <input class="campo" type="password" name="password" size="30px" placeholder="senha" required="">
-                    <br>
-                    <input class="campo" class="button" type="submit" value="Login">
-                    <br>
-                    <p id="error"></p> 
-                </form>
-                <a href="https://www.toworkfor.pt"><img class="imgTWF" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
-            </article>
-            <aside id="promoSlider" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
-                <section class="slides">
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/infinity" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo1.jpg" alt=""></a>
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/full-grip-michelin" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo2.jpg" alt=""></a>
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/safety-runners" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo3.jpg" alt=""></a>
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/fusion" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo4.jpg" alt=""></a>
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/street" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo5.jpg" alt=""></a>
-                    <a href="https://www.toworkfor.pt/pt/coleccoes-concept/full-grip-michelin" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo6.jpg" alt=""></a>                
-                </section>
-            </aside>
-    </section>
+    <body ng-controller="mainController">
+        <header>
+            <section id="yellowLine">
+                Olá <span id="userName">admin</span><a href="#">Sair</a>
+            </section>
+            <a href="https://www.toworkfor.pt"><img class="twfLogoMini" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
+            <nav id="topNav">            
+                <ul class="navConteiner">
+                    <li class="navEl"><a class="navLink" href="#mundo">Encomendar</a></li>
+                    <li class="navEl"><a class="navLink" href="#portugal">Encomendas pendentes</a></li>
+                    <li class="navEl"><a class="navLink" href="#tech">Histórico das encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="#desporto">Alterar dados</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        
+        
+
     </body>
 </html>
