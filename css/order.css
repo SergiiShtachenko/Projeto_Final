@@ -1,3 +1,4 @@
+/*--------Filtros--------*/
 .orFiltros{
     position: fixed;
     top: 82px;
@@ -8,19 +9,38 @@
     background-color: #fbba28;
 }
 .orContentor{
-    margin: 0 20px 10px 310px;
+    margin: 0 10px 10px 305px;
 }
 
-/*--------Lista dos produtos--------*/
+/*--------Totais--------*/
+.ordTotais{
+    position: fixed;
+    z-index: 101;
+    top: 26px;
+    right: 30px;    
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 15.5px;
+    line-height: 45px;
+    color: white;
+}
+#totalQtd{color: #fbba28;}
+#totalVal{color: #fbba28;}
 
+/*--------Lista dos produtos--------*/
 
 #orProductList td {
     margin: 0;
     padding: 0 20px;
-    border-bottom: 1px solid darkgray;
-    border-left-color: 
 }
 
+.orSizeTab td {
+    height: -10px;
+    border-bottom: 1px solid darkgray;
+}
+.orSizeForm{
+    display: none;
+}
 
 .orProd{
     height: 150px;   
@@ -66,6 +86,16 @@
     border-radius: 10px;
     padding: 0 10px;
     line-height: 22pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+.orSizeTab button{
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 18pt;
     border-color: #fbba28;
     font-family:Roboto,sans-serif;
     font-size: 12pt;

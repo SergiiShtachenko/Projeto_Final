@@ -19,6 +19,7 @@
 </aside>
 <section class="orContentor">
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
+    <article class="ordTotais">Total pares: <span id="totalQtd">0</span> Valor: <span id="totalVal">0</span> €</article>
     <table id="orProductList">
         <tr>
             <tr class="orProd">
@@ -28,7 +29,7 @@
                     <h5>8A01.20</h5>
                 </td>
                 <td>
-                    <h5>UPPER: <span class="nonStrong">Arbol Hydro Fabric</span></h5>
+                    <h5>UPPER: <span class="nonStrong">Black Microfiber</span></h5>
                     <h5>LINING: <span class="nonStrong">Poromax</span></h5>
                     <h5>SOLE: <span class="nonStrong">Safety EVA Sole</span></h5>
                     <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
@@ -45,34 +46,306 @@
                 </td>
                 <td>
                     <h3>PRICE</h3>
-                    <h4 class="yellowBGcolor">33,90€</h4>
+                    <h4 class="yellowBGcolor">33,50€</h4>
                 </td>
                 <td>
-                    <button onclick="">Encomendar</button>
+                    <button class="showSizes" type="button" onclick="ordShow('ordPr1')">Encomendar</button>
                 </td>
             </tr>
-            <tr>
-                <td class="orSizeTab"  colspan="7">
-                    <form action="">
-                        <input class="orSize" type="text" name="T35" placeholder="35"size=3>
-                        <input class="orSize" type="text" name="T36" placeholder="36"size=3>
-                        <input class="orSize" type="text" name="T37" placeholder="37"size=3>
-                        <input class="orSize" type="text" name="T38" placeholder="38"size=3>
-                        <input class="orSize" type="text" name="T39" placeholder="39"size=3>
-                        <input class="orSize" type="text" name="T40" placeholder="40"size=3>
-                        <input class="orSize" type="text" name="T41" placeholder="41"size=3>
-                        <input class="orSize" type="text" name="T42" placeholder="42"size=3>
-                        <input class="orSize" type="text" name="T43" placeholder="43"size=3>
-                        <input class="orSize" type="text" name="T44" placeholder="44"size=3>
-                        <input class="orSize" type="text" name="T45" placeholder="45"size=3>
-                        <input class="orSize" type="text" name="T46" placeholder="46"size=3>
-                        <input class="orSize" type="text" name="T47" placeholder="47"size=3>
-                        <input class="orSize" type="text" name="T48" placeholder="48"size=3>
+            <tr class="orSizeTab">
+                <td colspan="7">
+                    <form class="orSizeForm" id="ordPr1" action="">
+                        <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                        <button class="showSizes" type="button" onclick="ordHide('ordPr1')">^</button>
                     </form>
                 </td>
             </tr>
         </tr>
-        
-        
+        <tr>
+            <tr class="orProd">
+                <td><img src="img/product/low/prdXf2.jpg"></td>
+                <td>
+                    <h3>X-AR</h3>
+                    <h5>8A01.23</h5>
+                </td>
+                <td>
+                    <h5>UPPER: <span class="nonStrong">Blue Microfiber</span></h5>
+                    <h5>LINING: <span class="nonStrong">Poromax</span></h5>
+                    <h5>SOLE: <span class="nonStrong">Safety EVA Sole</span></h5>
+                    <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
+                    <h5>INSOLE: <span class="nonStrong">Composite</span></h5>
+                    <h5>INSOCK: <span class="nonStrong">BIORELAX</span></h5>                    
+                </td>
+                <td>
+                    <h3>SIZES</h3>
+                    <h4 class="nonStrong">35 - 48</h4>
+                </td>
+                <td>
+                    <h3>TECHNOLOGY</h3>
+                    <h4 class="yellowBGcolor">S3 | SRC | HRO</h4>
+                </td>
+                <td>
+                    <h3>PRICE</h3>
+                    <h4 class="yellowBGcolor">33,50€</h4>
+                </td>
+                <td>
+                    <button class="showSizes" type="button" onclick="ordShow('ordPr2')">Encomendar</button>
+                </td>
+            </tr>
+            <tr class="orSizeTab">
+                <td colspan="7">
+                    <form class="orSizeForm" id="ordPr2" action="">
+                        <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                        <button class="showSizes" type="button" onclick="ordHide('ordPr2')">^</button>
+                    </form>
+                </td>
+            </tr>
+        </tr>
+        <tr>
+            <tr class="orProd">
+                <td><img src="img/product/low/prdXf3.jpg"></td>
+                <td>
+                    <h3>X-CO2</h3>
+                    <h5>8A01.21</h5>
+                </td>
+                <td>
+                    <h5>UPPER: <span class="nonStrong">Grey Microfiber</span></h5>
+                    <h5>LINING: <span class="nonStrong">Poromax</span></h5>
+                    <h5>SOLE: <span class="nonStrong">Safety EVA Sole</span></h5>
+                    <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
+                    <h5>INSOLE: <span class="nonStrong">Composite</span></h5>
+                    <h5>INSOCK: <span class="nonStrong">BIORELAX</span></h5>                    
+                </td>
+                <td>
+                    <h3>SIZES</h3>
+                    <h4 class="nonStrong">35 - 48</h4>
+                </td>
+                <td>
+                    <h3>TECHNOLOGY</h3>
+                    <h4 class="yellowBGcolor">S3 | SRC | HRO</h4>
+                </td>
+                <td>
+                    <h3>PRICE</h3>
+                    <h4 class="yellowBGcolor">33,50€</h4>
+                </td>
+                <td>
+                    <button class="showSizes" type="button" onclick="ordShow('ordPr3')">Encomendar</button>
+                </td>
+            </tr>
+            <tr class="orSizeTab">
+                <td colspan="7">
+                    <form class="orSizeForm" id="ordPr3" action="">
+                        <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                        <button class="showSizes" type="button" onclick="ordHide('ordPr3')">^</button>
+                    </form>
+                </td>
+            </tr>
+        </tr>
+
+        <tr>
+            <tr class="orProd">
+                <td><img src="img/product/low/prdSR1.jpg"></td>
+                <td>
+                    <h3>URBAN</h3>
+                    <h5>8A86.00</h5>
+                </td>
+                <td>
+                    <h5>UPPER: <span class="nonStrong">Black Microfiber</span></h5>
+                    <h5>LINING: <span class="nonStrong">Poromax</span></h5>
+                    <h5>SOLE: <span class="nonStrong">Air Tubeless-Rubber</span></h5>
+                    <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
+                    <h5>INSOLE: <span class="nonStrong">Composite</span></h5>
+                    <h5>INSOCK: <span class="nonStrong">BIORELAX</span></h5>                    
+                </td>
+                <td>
+                    <h3>SIZES</h3>
+                    <h4 class="nonStrong">35 - 48</h4>
+                </td>
+                <td>
+                    <h3>TECHNOLOGY</h3>
+                    <h4 class="yellowBGcolor">S3 | SRC | ESD</h4>
+                    <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                </td>
+                <td>
+                    <h3>PRICE</h3>
+                    <h4 class="yellowBGcolor">33,50€</h4>
+                </td>
+                <td>
+                    <button class="showSizes" type="button" onclick="ordShow('ordPr4')">Encomendar</button>
+                </td>
+            </tr>
+            <tr class="orSizeTab">
+                <td colspan="7">
+                    <form class="orSizeForm" id="ordPr4" action="">
+                        <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                        <button class="showSizes" type="button" onclick="ordHide('ordPr4')">^</button>
+                    </form>
+                </td>
+            </tr>
+        </tr>
+
+        <tr>
+            <tr class="orProd">
+                <td><img src="img/product/low/prdSR2.jpg"></td>
+                <td>
+                    <h3>STRIDE</h3>
+                    <h5>8A86.13</h5>
+                </td>
+                <td>
+                    <h5>UPPER: <span class="nonStrong">Black Microfiber</span></h5>
+                    <h5>LINING: <span class="nonStrong">Poromax</span></h5>
+                    <h5>SOLE: <span class="nonStrong">Air Tubeless-Rubber</span></h5>
+                    <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
+                    <h5>INSOLE: <span class="nonStrong">Composite</span></h5>
+                    <h5>INSOCK: <span class="nonStrong">BIORELAX</span></h5>                    
+                </td>
+                <td>
+                    <h3>SIZES</h3>
+                    <h4 class="nonStrong">35 - 48</h4>
+                </td>
+                <td>
+                    <h3>TECHNOLOGY</h3>
+                    <h4 class="yellowBGcolor">S3 | SRC | ESD</h4>
+                    <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                </td>
+                <td>
+                    <h3>PRICE</h3>
+                    <h4 class="yellowBGcolor">33,50€</h4>
+                </td>
+                <td>
+                    <button class="showSizes" type="button" onclick="ordShow('ordPr5')">Encomendar</button>
+                </td>
+            </tr>
+            <tr class="orSizeTab">
+                <td colspan="7">
+                    <form class="orSizeForm" id="ordPr5" action="">
+                        <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                        <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                        <button class="showSizes" type="button" onclick="ordHide('ordPr5')">^</button>
+                    </form>
+                </td>
+            </tr>
+        </tr>
+
+        <tr>
+                <tr class="orProd">
+                    <td><img src="img/product/low/prdSR3.jpg"></td>
+                    <td>
+                        <h3>JUMPER</h3>
+                        <h5>8A11.31</h5>
+                    </td>
+                    <td>
+                        <h5>UPPER: <span class="nonStrong">Grey Microfiber</span></h5>
+                        <h5>LINING: <span class="nonStrong">Poromax</span></h5>
+                        <h5>SOLE: <span class="nonStrong">Air Tubeless-Rubber</span></h5>
+                        <h5>TOE CAP: <span class="nonStrong">Aluminium</span></h5>
+                        <h5>INSOLE: <span class="nonStrong">Composite</span></h5>
+                        <h5>INSOCK: <span class="nonStrong">BIORELAX</span></h5>                    
+                    </td>
+                    <td>
+                        <h3>SIZES</h3>
+                        <h4 class="nonStrong">35 - 48</h4>
+                    </td>
+                    <td>
+                        <h3>TECHNOLOGY</h3>
+                        <h4 class="yellowBGcolor">S1P | SRC | ESD</h4>
+                        <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                    </td>
+                    <td>
+                        <h3>PRICE</h3>
+                        <h4 class="yellowBGcolor">33,50€</h4>
+                    </td>
+                    <td>
+                        <button class="showSizes" type="button" onclick="ordShow('ordPr6')">Encomendar</button>
+                    </td>
+                </tr>
+                <tr class="orSizeTab">
+                    <td colspan="7">
+                        <form class="orSizeForm" id="ordPr6" action="">
+                            <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                            <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                            <button class="showSizes" type="button" onclick="ordHide('ordPr6')">^</button>
+                        </form>
+                    </td>
+                </tr>
+            </tr>        
     </table>
+
+
 </section>
