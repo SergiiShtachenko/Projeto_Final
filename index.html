@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="scotchApp"> <!-- definir angular app -->
+<html ng-app="angularApp"> <!-- definir angular app -->
     <head>
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>
@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/price.css">
 
-        <script src="js/index.js" defer></script>
-        
+        <script src="js/index.js" defer></script>  
+        <script src="js/login.js" defer></script>      
         <script src="js/price.js" defer></script>
 
         <!-- ANGULAR -->
@@ -29,12 +29,12 @@
         <!-- Fim jQuery -->
     </head>
 
-    <body ng-controller="mainController"> <!-- definir angular app -->
+    <body ng-controller="mainController" onload="sair()"> <!-- definir Controller -->
         <header>
             <section id="yellowLine">
-                Olá <span id="userName">admin</span><a href="#">Sair</a>
+                Olá <span id="userName">admin</span><a href="#" onclick="sair()">Sair</a>
             </section>
-            <a href="https://www.toworkfor.pt"><img class="twfLogoMini" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
+            <a href="https://www.toworkfor.pt"><img id="twfLogoMini" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
             <!-- Navigação -->
             <nav id="topNav" role="navigation">            
                 <ul class="navConteiner">
@@ -48,7 +48,7 @@
         <div id="main">
             
             <!-- Contenteudo das páginas será apresentado aqui -->
-            <div ng-view></div>
+            <div ng-view class="contentor"></div>
 
         </div>
         <footer>

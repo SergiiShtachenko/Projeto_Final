@@ -1,21 +1,24 @@
 
 <!--Pásina de Login-->
-<section class="conteudo">
+<section class="conteudo" onload="esconder()">
     <article id="userArea">
         <a href="http://www.amfshoes.com/"><img class="imgLogo" src="img/logo AMF FC - payoff.jpg" alt="AMF Safety Shoes"></a>
         <form name="userAccess" action="" method="POST">
             <label>Introduza o seu login e a senha:</label>
             <br>
-            <input class="campo" type="name"name="user" size="30px" placeholder="nome@mail.pt" required="">
+            <input class="campo" type="name"name="user" size="30px" placeholder="nome@mail.pt" required="" onchange="validarCredenciais()">
             <br>
             <input class="campo" type="password" name="password" size="30px" placeholder="senha" required="">
             <br>
             <input class="campo" class="button" type="submit" value="Login">
+            
+            <span id="criarConta">Clique <a href="#registo">aqui</a> para criar conta</span>
             <br>
             <p id="error"></p> 
         </form>
         <a href="https://www.toworkfor.pt"><img class="imgTWF" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
     </article>
+    
     <aside id="promoSlider" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
         <section class="slides">
             <a href="https://www.toworkfor.pt/pt/coleccoes-concept/infinity" data-ma5-dot="#ccc" data-ma5-dot-active="#999"><img class="promo" src="img/index/promo1.jpg" alt=""></a>
@@ -27,5 +30,5 @@
         </section>
     </aside>
 </section>
-<script src="js/login.js" defer></script>
+
 

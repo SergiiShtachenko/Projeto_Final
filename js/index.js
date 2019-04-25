@@ -1,51 +1,53 @@
 /*--------------------ANGULAR SETTING--------------------*/
 
 // Criar modulo angularApp
-// create the module and name it scotchApp
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
+var angularApp = angular.module('angularApp', ['ngRoute']);
 
-// configure our routes
-scotchApp.config(function($routeProvider) {
+// Configurar routes
+angularApp.config(function($routeProvider) {
     $routeProvider
 
-        // route for the home page
+        // route para login
         .when('/', {
-            templateUrl : 'login.html',
+            templateUrl : 'pages/login.html',
             controller  : 'mainController'
         })
 
-        // route for the about page
+        // route para encomendas
         .when('/order', {
-            templateUrl : 'order.html',
+            templateUrl : 'pages/order.html',
             controller  : 'orderController'
         })
 
-        // route for the contact page
+        // route para pendentes
         .when('/pending', {
-            templateUrl : 'pending.html',
+            templateUrl : 'pages/pending.html',
             controller  : 'pendingController'
         });
 });
 
-// create the controller and inject Angular's $scope
-scotchApp.controller('mainController', function($scope) {
-    // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
+// Criar controller
+angularApp.controller('mainController', function($scope) {
+    // Criar a messagem
+    $scope.message = 'Estamos em main';
 });
 
-scotchApp.controller('orderController', function($scope) {
-    $scope.message = 'Look! I am an about page.';
+angularApp.controller('orderController', function($scope) {
+    $scope.message = 'Estamos nas encomendas';
 });
 
 /*--------------------FIM ANGULAR SETTING--------------------*/
 
-// Função temporaria - atribuir o nome do utilizador
-let form1 = document.getElementsByTagName('form')[0];
+// Esconder navigação ao sair
+function esconder(){
+    document.getElementById('yellowLine').style.display = 'none';
+    document.getElementById('twfLogoMini').style.display = 'none';
+    document.getElementById('topNav').style.display = 'none';
+}
 
-form1.addEventListener('submit', function(event){
-
-    let nome = document.getElementById("userName");    
-    nome.innerHTML = document.querySelector('form input[name=user]').value;
-
-    event.preventDefault();
-});
+// Mostrar navigação
+function mostrar(){
+    document.getElementById('yellowLine').style.display = 'block';
+    document.getElementById('twfLogoMini').style.display = 'block';
+    document.getElementById('topNav').style.display = 'block';
+}
