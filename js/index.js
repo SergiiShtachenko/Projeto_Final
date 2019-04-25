@@ -28,12 +28,17 @@ angularApp.config(function($routeProvider) {
 
 // Criar controller
 angularApp.controller('mainController', function($scope) {
+    esconder();
     // Criar a messagem
-    $scope.message = 'Estamos em main';
+    //$scope.message = 'Estamos em main';
 });
 
 angularApp.controller('orderController', function($scope) {
-    $scope.message = 'Estamos nas encomendas';
+    mostrar();
+});
+
+angularApp.controller('pendingController', function($scope) {
+    mostrar();
 });
 
 /*--------------------FIM ANGULAR SETTING--------------------*/

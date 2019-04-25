@@ -41,7 +41,6 @@ function validarCredenciais(){
             
             else{
                 if (password === passCorretoArrey[index]) {
-                    
                     // Função temporaria - atribuir o nome do utilizador
                     let nome = document.getElementById("userName");    
                     nome.innerHTML = document.querySelector('form input[name=user]').value;
