@@ -12,9 +12,18 @@
 }
 
 /*--------Lista dos produtos--------*/
+
+
+#orProductList td {
+    margin: 0;
+    padding: 0 20px;
+    border-bottom: 1px solid darkgray;
+    border-left-color: 
+}
+
+
 .orProd{
-    height: 250px;
-    border-bottom: 4px #fbba28 solid;
+    height: 150px;   
 }
 
 .orProd h3{
@@ -35,10 +44,30 @@
     font-weight: normal;    
 }
 .yellowBGcolor{
-    background-color: #fbba28
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
 }
 
-.orProd{
-    margin: 0;
-    border: 4px #fbba28 solid;
+.orSizeTab{
+    /*display: none;*/
+    text-align: center;
+    height: 40px;    
+}
+.orSize{
+    text-align: center;
+    height: 25px;
+    border: 1px solid #fbba28;
+    border-radius: 10px;
+}
+.orProd button{
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
 }
