@@ -1,70 +1,40 @@
 /*--------------------ANGULAR SETTING--------------------*/
 
 // Criar modulo angularApp
-var routerApp = angular.module('routerApp', ['ui.router']);
+// create the module and name it scotchApp
+var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
-    
-    $urlRouterProvider.otherwise('/login');
-    
-    $stateProvider
-        
-        // HOME STATES AND NESTED VIEWS ========================================
-        .state('login', {
-            url: '/login',
-            templateUrl: 'login.html'
+// configure our routes
+scotchApp.config(function($routeProvider) {
+    $routeProvider
+
+        // route for the home page
+        .when('/', {
+            templateUrl : 'login.html',
+            controller  : 'mainController'
         })
-        
-        // nested list with custom controller
-        .state('home.list', {
-            url: '/list',
-            templateUrl: 'partial-home-list.html',
-            controller: function($scope) {
-                $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-            }
+
+        // route for the about page
+        .when('/order', {
+            templateUrl : 'order.html',
+            controller  : 'orderController'
         })
-        
-        // nested list with just some random string data
-        .state('home.paragraph', {
-            url: '/paragraph',
-            template: 'I could sure use a drink right now.'
-        })
-        
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('about', {
-            url: '/about',
-            views: {
-                '': { templateUrl: 'partial-about.html' },
-                'columnOne@about': { template: 'Look I am a column!' },
-                'columnTwo@about': { 
-                    templateUrl: 'table-data.html',
-                    controller: 'scotchController'
-                }
-            }
-            
+
+        // route for the contact page
+        .when('/pending', {
+            templateUrl : 'pending.html',
+            controller  : 'pendingController'
         });
-        
 });
 
-routerApp.controller('scotchController', function($scope) {
-    
-    $scope.message = 'test';
-   
-    $scope.scotches = [
-        {
-            name: 'Macallan 12',
-            price: 50
-        },
-        {
-            name: 'Chivas Regal Royal Salute',
-            price: 10000
-        },
-        {
-            name: 'Glenfiddich 1937',
-            price: 20000
-        }
-    ];
-    
+// create the controller and inject Angular's $scope
+scotchApp.controller('mainController', function($scope) {
+    // create a message to display in our view
+    $scope.message = 'Everyone come and see how good I look!';
+});
+
+scotchApp.controller('orderController', function($scope) {
+    $scope.message = 'Look! I am an about page.';
 });
 
 /*--------------------FIM ANGULAR SETTING--------------------*/

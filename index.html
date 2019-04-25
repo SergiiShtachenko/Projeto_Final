@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> <!-- definir angular app -->
+<html ng-app="scotchApp"> <!-- definir angular app -->
     <head>
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>
@@ -13,8 +13,8 @@
         <script src="js/price.js" defer></script>
 
         <!-- ANGULAR -->
-        <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
         <!-- jQuery -->
         <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
@@ -29,7 +29,7 @@
         <!-- Fim jQuery -->
     </head>
 
-    <body ng-app="routerApp"> <!-- definir angular app -->
+    <body ng-controller="mainController"> <!-- definir angular app -->
         <header>
             <section id="yellowLine">
                 Olá <span id="userName">admin</span><a href="#">Sair</a>
@@ -38,17 +38,17 @@
             <!-- Navigação -->
             <nav id="topNav" role="navigation">            
                 <ul class="navConteiner">
-                    <li class="navEl"><a class="navLink" ui-sref="#">Encomendar</a></li>
-                    <li class="navEl"><a class="navLink" ui-sref="pendente">Encomendas pendentes</a></li>
-                    <li class="navEl"><a class="navLink" href="historico">Histórico das encomendas</a></li>
-                    <li class="navEl"><a class="navLink" href="dados">Alterar dados</a></li>
+                    <li class="navEl"><a class="navLink" href="#order">Encomendar</a></li>
+                    <li class="navEl"><a class="navLink" href="#pending">Encomendas pendentes</a></li>
+                    <li class="navEl"><a class="navLink" href="#history">Histórico das encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="#dates">Alterar dados</a></li>
                 </ul>
             </nav>
         </header>
         <div id="main">
             
             <!-- Contenteudo das páginas será apresentado aqui -->
-            <div ui-view></div>
+            <div ng-view></div>
 
         </div>
         <footer>
