@@ -1,0 +1,20 @@
+.EditarDadosUser
+{font-family: Roboto,sans-serif;
+font-size: 12px;
+font-style: normal;
+line-height: normal;
+font-weight: normal;
+font-variant: normal;
+
+background-color: #fbba28;
+white-space: normal;
+display: table;
+color: #000000;
+height: auto;
+width: auto;
+cursor: auto;
+border: thin none #FFFFFF;
+}
+input {
+background-color: rgb(212, 209, 209);
+}
