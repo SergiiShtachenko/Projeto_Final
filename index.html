@@ -5,12 +5,11 @@
         <title>AMF - Plataforma on-line</title>
 
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/price.css">
+        <link rel="stylesheet" href="css/order.css">
 
         <script src="js/index.js" defer></script>  
-        <script src="js/login.js" defer></script>      
-        <script src="js/price.js" defer></script>
+        <script src="js/login.js" defer></script> 
+        <script src="js/order.js" defer></script>
 
         <!-- ANGULAR -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
@@ -32,7 +31,7 @@
     <body ng-controller="mainController"> <!-- definir Controller -->
         <header>
             <section id="yellowLine">
-                Olá <span id="userName">admin</span><a href="#">Sair</a>
+                Olá <span id="userName">nome</span><a href="#">Sair</a>
             </section>
             <a href="https://www.toworkfor.pt"><img id="twfLogoMini" src="img/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
             <!-- Navigação -->
@@ -46,16 +45,16 @@
             </nav>
             <nav class="topNav" id="topNavAD" role="navigation">            
                 <ul class="navConteiner">
-                    <li class="navEl"><a class="navLink" href="#order">Gerir clientes</a></li>
-                    <li class="navEl"><a class="navLink" href="#pending">Geriri produtos</a></li>
-                    <li class="navEl"><a class="navLink" href="#history">Listas de preços</a></li>
-                    <li class="navEl"><a class="navLink" href="#dates">Ver encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="#clients">Gerir clientes</a></li>
+                    <li class="navEl"><a class="navLink" href="#product">Geriri produtos</a></li>
+                    <li class="navEl"><a class="navLink" href="#price">Listas de preços</a></li>
+                    <li class="navEl"><a class="navLink" href="#alloredes">Ver encomendas</a></li>
                 </ul>
             </nav>
         </header>
         <div id="main">
             
-            <!-- Contenteudo das páginas será apresentado aqui -->
+            <!-- Contente das páginas será apresentado aqui -->
             <div ng-view class="contentor"></div>
 
         </div>

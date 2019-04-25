@@ -13,16 +13,23 @@ angularApp.config(function($routeProvider) {
             controller  : 'mainController'
         })
 
+        /*--------Paginas do cliente--------*/
         // route para encomendas
         .when('/order', {
             templateUrl : 'pages/order.html',
             controller  : 'orderController'
         })
-
         // route para pendentes
         .when('/pending', {
             templateUrl : 'pages/pending.html',
             controller  : 'pendingController'
+        })
+
+        /*--------Paginas do Administrador--------*/
+        // route para encomendas
+        .when('/clients', {
+            templateUrl : 'pages/clients.html',
+            controller  : 'clientsController'
         });
 });
 
@@ -33,15 +40,19 @@ angularApp.controller('mainController', function($scope) {
     //$scope.message = 'Estamos em main';
 });
 
+// Paginas do cliente
 angularApp.controller('orderController', function($scope) {
-    if(userAcces === "admin") mostrarAD();
-    else mostrarCL();
+    mostrarCL();
+});
+angularApp.controller('pendingController', function($scope) {
+    mostrarCL();
 });
 
-angularApp.controller('pendingController', function($scope) {
-    if(userAcces === "admin") mostrarAD();
-    else mostrarCL();
+// Paginas do Administrador
+angularApp.controller('clientsController', function($scope) {
+    mostrarAD();
 });
+
 
 /*--------------------FIM ANGULAR SETTING--------------------*/
 

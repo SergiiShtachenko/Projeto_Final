@@ -1,0 +1,12 @@
+.orFiltros{
+    position: fixed;
+    top: 100px;
+    z-index: 90;
+    margin: 0 0;
+    padding: 10px 20px;
+    width: 250px;
+    background-color: #fbba28;
+}
+.orContentor{
+    margin-left: 350px;
+}

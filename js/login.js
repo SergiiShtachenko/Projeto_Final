@@ -46,7 +46,8 @@ function validarCredenciais(){
                     nome.innerHTML = document.querySelector('form input[name=user]').value;
                     userAcces = document.querySelector('form input[name=user]').value;
 
-                    window.location.href = "#order";                                                          
+                    if(userAcces === "admin") window.location.href = "#clients";
+                    else window.location.href = "#order";                                                          
                 }
                 else{
                     if(tentativas > 1){ // 3 tentativas de inserir palavra passe
