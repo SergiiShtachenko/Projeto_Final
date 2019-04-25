@@ -60,13 +60,13 @@
     color: #fbba28;
 }
 #main{
-    margin-top: 100px;
+    margin-top: 92px;
 }
 /*-----FIM INDEX PAGE-----*/
 
 /*-----LOGIN PAGE-----*/
 .conteudo{
-    margin-top: -70px; /*100px (por defeito) - 70px = 30px*/
+    margin-top: -70px; /*92px (por defeito) - 62px = 30px*/
     display: flex;
     width: 70%;
     margin-left: 15%;
@@ -102,3 +102,15 @@
     color: red;
 }
 /*-----FIM LOGIN PAGE-----*/
+
+
+/*-----CONFIGURAÇÕES COMUNS-----*/
+.pageNome{
+    font-family: 'Compacta';
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fdc400;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}

@@ -1,6 +1,6 @@
 .orFiltros{
     position: fixed;
-    top: 100px;
+    top: 82px;
     z-index: 90;
     margin: 0 0;
     padding: 10px 20px;
@@ -8,5 +8,37 @@
     background-color: #fbba28;
 }
 .orContentor{
-    margin-left: 350px;
+    margin: 0 20px 10px 310px;
+}
+
+/*--------Lista dos produtos--------*/
+.orProd{
+    height: 250px;
+    border-bottom: 4px #fbba28 solid;
+}
+
+.orProd h3{
+    margin: 2px 5px;
+    font-family:Roboto,sans-serif;
+    text-align: center;
+}
+.orProd h4{
+    margin: 2px 5px;
+    font-family:Roboto,sans-serif;
+    text-align: center;
+}
+.orProd h5{
+    margin: 1px 5px;
+    font-family:Roboto,sans-serif;
+}
+.nonStrong{
+    font-weight: normal;    
+}
+.yellowBGcolor{
+    background-color: #fbba28
+}
+
+.orProd{
+    margin: 0;
+    border: 4px #fbba28 solid;
 }
