@@ -44,6 +44,7 @@ function validarCredenciais(){
                     // Função temporaria - atribuir o nome do utilizador
                     let nome = document.getElementById("userName");    
                     nome.innerHTML = document.querySelector('form input[name=user]').value;
+                    userAcces = document.querySelector('form input[name=user]').value;
 
                     window.location.href = "#order";                                                          
                 }
