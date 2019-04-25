@@ -11,20 +11,24 @@
 <!--Pásina de Registo-->
     <section class="RegistoNovoUser">
         <article id="NovoUser">
-            <form name="registoUtilizador" action="" method="POST">      
-                <p>Email <br> <input type="email" name="email" placeholder="empresa@email.com"required="preenchimento obrigatório" size=30>*</p>
-                <p>Password *<br> <input type="password" name="password" placeholder="Defina a sua password" required="preenchimento obrigatório" size=20>a password deve ter um mínimo de 8 carateres</p>
-                <p>Repetir Password * <br> <input type="password" name="repeatpassword" placeholder="Repita a sua password" required="preenchimento obrigatório" size=20></p>
-                <p>Nome *<br> <input type="text" name="nome" placeholder="Insira o nome da empresa" required="preenchimento obrigatório" size=100></p>
-                <p>Morada *<br> <input type="text" name="morada" placeholder="Rua/Av./Apartado" required="preenchimento obrigatório" size=100></p>
-                <p>Localidade *<br><input type="text" name="localidade" placeholder="Localidade" required="preenchimento obrigatório" size=40></p>
-                <p>Codigo Postal *<br><input type="text" name="cp1" placeholder="XXXX" required="preenchimento obrigatório" size=4 maxlength="4">-<input type="text" name="cp2" placeholder="XXX" required="preenchimento obrigatório" size=3 maxlength="3"></p>
-                <p>NIF *<br> <input type="text" name="NIF" placeholder="NIF da empresa" required="preenchimento obrigatório" size="9"></p>
-                <p>IBAN *<br> <input type="text" name="IBAN" placeholder="IBAN da empresa" required="preenchimento obrigatório" size="25"></p>
-                <p>Pessoa de contacto *<br> <input type="text" name="pessoacontacto" placeholder="Indique o nome da pessoa de contacto" required="preenchimento obrigatório" size="40"></p>
-                <p>Contacto telefónico *<br> <input type="text" name="tlm" placeholder="nº de contacto" required="preenchimento obrigatório" size="9"></p>
-                <p>Contacto email alternativo *<br> <input type="text" name="emailalt" placeholder="Indique o email da pessoa de contacto" required="preenchimento obrigatório" size="30"></p>
-                <p>*campos de preenchimento obrigatório</p>
+            <form name="registoUtilizador" action="" method="POST">
+                <p class="Username">
+                   <input type="email" name="email" placeholder="Email *"required="preenchimento obrigatório"></p>
+                <p class="Password">
+                    <input type="password" name="password" placeholder="Password *" required="preenchimento obrigatório" > <input type="password" name="repeatpassword" placeholder="Repita a sua password *" required="preenchimento obrigatório" ></p>
+                <p class="Dados">
+                    <input type="text" name="nome" placeholder="Nome da Empresa *" required="preenchimento obrigatório" ></p>
+                    <p><input type="text" name="morada" placeholder="Morada *" required="preenchimento obrigatório" ></p>
+                    <p><input type="text" name="localidade" placeholder="Localidade *" required="preenchimento obrigatório" > <input type="text" name="cp1" placeholder="XXXX *" required="preenchimento obrigatório" maxlength="4"> <input type="text" name="cp2" placeholder="XXX *" required="preenchimento obrigatório" maxlength="3"></p>
+                    <p><input type="text" name="País" placeholder="País *" required="preenchimento obrigatório" ></p>
+                <p class="NIF">
+                    <input type="text" name="NIF" placeholder="NIF da empresa *" required="preenchimento obrigatório" maxlength="9"></p>
+                <p class="IBAN">
+                    <input type="text" name="IBAN" placeholder="IBAN da empresa *" required="preenchimento obrigatório" maxlength="25"></p>
+                <p class="alternativo">
+                    <input type="text" name="pessoacontacto" placeholder="Nome da pessoa de contacto *" required="preenchimento obrigatório"> <input type="text" name="tlm" placeholder="contacto telefonico *" required="preenchimento obrigatório" maxlength="15"></p>
+                    <p><input type="email" name="emailalt" placeholder="Email da pessoa de contacto *" required="preenchimento obrigatório" ></p>
+                <h5>*campos de preenchimento obrigatório</h5>
                 <p><input type="submit" value="Enviar" onclick="return validarPass()"></p>                
             </form>
         </article>
