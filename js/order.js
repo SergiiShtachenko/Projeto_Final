@@ -11,13 +11,14 @@ function calcTotal(){
     let totQtd = 0;
     let totVal = 0.0;
 
-    let lines = document.querySelectorAll("table tr");    
+    let orderTabel = document.getElementById("orProductList");
+    let lines = orderTabel.querySelectorAll("table tr");    
 
     for(let i = 0; i < lines.length; i++){
         //console.log(lines[i]);
         let input = lines[i].getElementsByTagName("input");
         for(let i = 0; i < input.length; i++){
-            //console.log(input[i].value);
+            console.log(input[i].value);
             if(input[i] != null) totQtd += Number(input[i].value);
         }
         //if(input != null ) totQtd += Number(input.value);
@@ -26,4 +27,12 @@ function calcTotal(){
     document.getElementById("totalQtd").innerHTML = totQtd;
     document.getElementById("totalVal").innerHTML = (totQtd*33.5);
 
+}
+
+function orOpenVid(){
+    document.getElementById("orVideoBox").style.display = 'block';
+}
+
+function ordCloseVid(){
+    document.getElementById("orVideoBox").style.display = 'none';
 }

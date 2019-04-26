@@ -7,10 +7,16 @@ var angularApp = angular.module('angularApp', ['ngRoute']);
 angularApp.config(function($routeProvider) {
     $routeProvider
 
+        /*--------Paginas do login--------*/
         // route para login
         .when('/', {
             templateUrl : 'pages/login.html',
             controller  : 'mainController'
+        })
+        // route para registo
+        .when('/registo', {
+            templateUrl : 'pages/registo.html',
+            controller  : 'registoController'
         })
 
         /*--------Paginas do cliente--------*/
@@ -24,9 +30,15 @@ angularApp.config(function($routeProvider) {
             templateUrl : 'pages/pending.html',
             controller  : 'pendingController'
         })
+        
+        // route para Alterar dados
+        .when('/editDates', {
+            templateUrl : 'pages/editarDados.html',
+            controller  : 'editDatesController'
+        })
 
         /*--------Paginas do Administrador--------*/
-        // route para encomendas
+        // route para clientes
         .when('/clients', {
             templateUrl : 'pages/clients.html',
             controller  : 'clientsController'
@@ -34,21 +46,29 @@ angularApp.config(function($routeProvider) {
 });
 
 // Criar controller
+/*--------Paginas do login--------*/
 angularApp.controller('mainController', function($scope) {
     esconder();
     // Criar a messagem
-    //$scope.message = 'Estamos em main';
+    //$scope.message = 'Uma mensagem';
+    // Colocar na *page.html <p>{{ message }}</p>
+});
+angularApp.controller('registoController', function($scope) {
+    // Se for preciso
 });
 
-// Paginas do cliente
+/*--------Paginas do cliente--------*/
 angularApp.controller('orderController', function($scope) {
     mostrarCL();
 });
 angularApp.controller('pendingController', function($scope) {
     mostrarCL();
 });
+angularApp.controller('editDatesController', function($scope) {
+    validarNewPass();
+});
 
-// Paginas do Administrador
+/*--------Paginas do Administrador--------*/
 angularApp.controller('clientsController', function($scope) {
     mostrarAD();
 });

@@ -4,6 +4,8 @@
 </header>
 <aside>
     <form class="orFiltros" name="filtros" action="" method="">
+        <br>
+        <br>
         <label>Pesquizar artigo:</label>
         <br>
         <input class="campo" type="text" name="serch" size="30px" placeholder="Introduza paçavra para pesquiza"onchange="pesquizar()">
@@ -20,7 +22,7 @@
         <br>
         <hr>
         Caracteristicas adicionais:<br>
-        <table border="0">
+        <table>
             <tr>
                 <td><input type="checkbox" name="interesse" value="SRC">SRC</td>
                 <td><input type="checkbox" name="interesse" value="SRA">SRA</td>
@@ -231,7 +233,7 @@
                 <td>
                     <h3>TECHNOLOGY</h3>
                     <h4 class="yellowBGcolor">S3 | SRC | ESD</h4>
-                    <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                    <a href="javascript: orOpenVid()"><img src="img/AIR TUBELESS.jpg"></a>
                 </td>
                 <td>
                     <h3>PRICE</h3>
@@ -286,7 +288,7 @@
                 <td>
                     <h3>TECHNOLOGY</h3>
                     <h4 class="yellowBGcolor">S3 | SRC | ESD</h4>
-                    <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                    <a href="javascript: orOpenVid()"><img src="img/AIR TUBELESS.jpg"></a>
                 </td>
                 <td>
                     <h3>PRICE</h3>
@@ -341,7 +343,7 @@
                     <td>
                         <h3>TECHNOLOGY</h3>
                         <h4 class="yellowBGcolor">S1P | SRC | ESD</h4>
-                        <a href=""><img src="img/AIR TUBELESS.jpg"></a>
+                        <a href="javascript: orOpenVid()"><img src="img/AIR TUBELESS.jpg"></a>
                     </td>
                     <td>
                         <h3>PRICE</h3>
@@ -374,6 +376,15 @@
                 </tr>
             </tr>        
     </table>
+    <article id="orVideoBox">
+        <video controls>            
+            <source src="video/air_tubeless_vid.mp4" type="video/mp4">
+            <!--<track kind="subtitles" srclang="en" src="video/legenda/leg_air_tubeless_vid_EN.vtt">-->
+            <track kind="subtitles" src="video/legenda/leg_air_tubeless_vid_PT.vtt" srclang="pt" default="pt">
+            <p>O seu browser não suporta HTML5 video. Carrega <a href="video/air_tubeless_vid.mp4">aqui</a> uma cópia.</p> 
+        </video>
+        <div class="orCloseVid"><a class="nonDecor" href="javascript: ordCloseVid();">Fechar o video</a></div><br>
+    </article>
 
 
 </section>
