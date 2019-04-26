@@ -7,6 +7,8 @@
     padding: 10px 20px;
     width: 250px;
     background-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 11pt;
 }
 .orContentor{
     margin: 0 10px 10px 305px;
@@ -28,7 +30,6 @@
 #totalVal{color: #fbba28;}
 
 /*--------Lista dos produtos--------*/
-
 #orProductList td {
     margin: 0;
     padding: 0 20px;
@@ -49,7 +50,6 @@
 .orProd h3{
     margin: 2px 5px;
     font-family:Roboto,sans-serif;
-    text-align: center;
 }
 .orProd h4{
     margin: 2px 5px;

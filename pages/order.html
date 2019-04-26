@@ -4,17 +4,45 @@
 </header>
 <aside>
     <form class="orFiltros" name="filtros" action="" method="">
-        <label>Introduza o seu login e a senha:</label>
+        <label>Pesquizar artigo:</label>
         <br>
-        <input class="campo" type="name"name="user" size="30px" placeholder="nome@mail.pt" required="" onchange="validarCredenciais()">
+        <input class="campo" type="text" name="serch" size="30px" placeholder="Introduza paçavra para pesquiza"onchange="pesquizar()">
         <br>
-        <input class="campo" type="password" name="password" size="30px" placeholder="senha" required="">
+        <hr>   
+        Tipo de portecção: 
+        <select id="pais" name="pais">
+            <option value="All" selected>Todos</option>
+            <option value="S1">S1</option>
+            <option value="S1P">S1P</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+        </select>
         <br>
-        <input class="campo" class="button" type="submit" value="Login">
-        
-        <span id="criarConta">Clique <a href="#registo">aqui</a> para criar conta</span>
+        <hr>
+        Caracteristicas adicionais:<br>
+        <table border="0">
+            <tr>
+                <td><input type="checkbox" name="interesse" value="SRC">SRC</td>
+                <td><input type="checkbox" name="interesse" value="SRA">SRA</td>
+                <td><input type="checkbox" name="interesse" value="SRB">SRB</td>                           
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="interesse" value="HRO">HRO</td>
+                <td><input type="checkbox" name="interesse" value="ESD">ESD</td>
+                <td><input type="checkbox" name="interesse" value="mundo">WR</td>                            
+            </tr>
+        </table>
         <br>
-        <p id="error"></p> 
+        <hr>   
+        Cor da UPPER: 
+        <select id="pais" name="pais">
+            <option value="All" selected>Todos</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Grey">Grey</option>
+            <option value="Red">Red</option>
+        </select>
+        <br>
     </form>
 </aside>
 <section class="orContentor">
