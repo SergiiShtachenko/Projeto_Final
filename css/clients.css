@@ -1,0 +1,80 @@
+body {
+  width: 60em;
+  margin: 20px;
+  background-color: black
+}
+
+form {
+  font-family: Roboto,sans-serif;
+  
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbba28;
+  color: black;
+  padding: 20px;
+  margin-top: 10px;
+  
+}
+
+table {
+  background-color: #fbba28;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  font-family: Roboto,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+th, td {
+  padding: 10px;
+}
+footer {
+  margin: 1em 0;
+}
+input[id="Nome"], [id="email"]{
+    width: 300px;
+    padding: 10px;
+    color:  #fbba28;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color:black;
+}
+  input[id="País"], [id="NIF"]{
+    width: 150px;
+    padding: 10px;
+    color:  #fbba28;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color:black;
+}
+input[type=submit] {
+  color: #fbba28;
+  width: 120px;
+  padding: 10px;
+  margin-left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: none;
+  background-color: black;
+}
+h1{
+  font-family: Roboto,sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  color: #fbba28
+}
+
+
+  
