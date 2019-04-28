@@ -65,7 +65,7 @@ angularApp.controller('pendingController', function($scope) {
     mostrarCL();
 });
 angularApp.controller('editDatesController', function($scope) {
-    validarNewPass();
+    mostrarCL();
 });
 
 /*--------Paginas do Administrador--------*/

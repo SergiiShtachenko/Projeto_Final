@@ -25,8 +25,7 @@ function calcTotal(){
     }
 
     document.getElementById("totalQtd").innerHTML = totQtd;
-    document.getElementById("totalVal").innerHTML = (totQtd*33.5);
-
+    document.getElementById("totalVal").innerHTML = (parseFloat(totQtd*33.5).toFixed(2));    
 }
 
 function orOpenVid(){
@@ -35,4 +34,22 @@ function orOpenVid(){
 
 function ordCloseVid(){
     document.getElementById("orVideoBox").style.display = 'none';
+}
+
+// Não esta finalizada
+function ordSerchLine(){
+   let serchWord = document.getElementById("orSerch");
+   let serchNonCase = serchWord.value.toUpperCase();
+   console.log(serchNonCase);
+   if(serchNonCase.length > 2){
+       let orderTabel = document.getElementById("orProductList");
+       let lines = orderTabel.querySelectorAll("table tr");       
+       //console.log(lines);
+       for (let i = 0; i < lines.length; i++) {
+           let textLine = lines[i].innerText;
+           console.log(textLine);
+           lines[i].style.display = "none"
+           if(textLine.toUpperCase().indexOf(serchNonCase) > -1) lines[i].style.display = "block";
+       }
+    }
 }

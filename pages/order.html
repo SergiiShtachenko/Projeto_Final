@@ -8,7 +8,7 @@
         <br>
         <label>Pesquizar artigo:</label>
         <br>
-        <input class="campo" type="text" name="serch" size="30px" placeholder="Introduza paçavra para pesquiza"onchange="pesquizar()">
+        <input class="campo" id="orSerch" type="text" name="serch" size="30px" placeholder="Introduza paçavra para pesquiza" onchange="ordSerchLine()">
         <br>
         <hr>   
         Tipo de portecção: 
@@ -51,7 +51,7 @@
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <article class="ordTotais">Total pares: <span id="totalQtd">0</span> Valor: <span id="totalVal">0</span> €</article>
     <table id="orProductList">
-        <tr>
+        <tr class="ordLinha">
             <tr class="orProd">
                 <td><img src="img/product/low/prdXf1.jpg"></td>
                 <td>
@@ -104,7 +104,7 @@
                 </td>
             </tr>
         </tr>
-        <tr>
+        <tr class="ordLinha">
             <tr class="orProd">
                 <td><img src="img/product/low/prdXf2.jpg"></td>
                 <td>
@@ -157,7 +157,7 @@
                 </td>
             </tr>
         </tr>
-        <tr>
+        <tr class="ordLinha">
             <tr class="orProd">
                 <td><img src="img/product/low/prdXf3.jpg"></td>
                 <td>
@@ -211,7 +211,7 @@
             </tr>
         </tr>
 
-        <tr>
+        <tr class="ordLinha">
             <tr class="orProd">
                 <td><img src="img/product/low/prdSR1.jpg"></td>
                 <td>
@@ -266,7 +266,7 @@
             </tr>
         </tr>
 
-        <tr>
+        <tr class="ordLinha">
             <tr class="orProd">
                 <td><img src="img/product/low/prdSR2.jpg"></td>
                 <td>
@@ -321,7 +321,7 @@
             </tr>
         </tr>
 
-        <tr>
+        <tr class="ordLinha">
                 <tr class="orProd">
                     <td><img src="img/product/low/prdSR3.jpg"></td>
                     <td>

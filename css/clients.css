@@ -12,8 +12,7 @@ form {
   background-color: #fbba28;
   color: black;
   padding: 20px;
-  margin-top: 10px;
-  
+  margin-top: 10px;  
 }
 
 table {
@@ -30,7 +29,7 @@ table {
   width: 100%;
   margin-top: 1em;
   
-  margin-left: auto;
+  margin-left: 5%;
   margin-right: auto;
   
 }

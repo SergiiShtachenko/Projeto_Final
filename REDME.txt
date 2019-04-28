@@ -1,0 +1,7 @@
+1) O saide deve ser aberto na servidor virtual
+2) para entrar de modo do administrador
+	Login: admin
+	Palavrapasse: admin
+3) para entrer do modo do cliente
+	Login: user
+	Palavrapasse: user
