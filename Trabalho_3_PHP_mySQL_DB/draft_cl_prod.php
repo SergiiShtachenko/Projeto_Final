@@ -54,7 +54,6 @@
         }
         return $listaPr;
     }
-
 ?>
 
 <?php

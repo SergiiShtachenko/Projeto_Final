@@ -4,9 +4,12 @@
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>      
         <style>
-        <?php echo file_get_contents("css/produto.css"); ?>
-        <?php echo file_get_contents("css/header.css"); ?>
+            <?php echo file_get_contents("css/produto.css"); ?>
+            <?php echo file_get_contents("css/header.css"); ?>
         </style>
+        <script>
+            <?php echo file_get_contents("js/header.css"); ?>
+        </script>
     </head>    
     <body>
         <header>
@@ -22,5 +25,7 @@
                     <li class="navEl"><a class="navLink" href="#price">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#alloredes">Encomendas</a></li>
                 </ul>
+                <a href="function showPesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
             </nav>
+
         </header>
