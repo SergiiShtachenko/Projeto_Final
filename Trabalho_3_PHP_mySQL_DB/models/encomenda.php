@@ -45,16 +45,25 @@ class Produto {
 
     //Ativo
     public function getAtivo(){
-        return $this->_ref;
+        return $this->_ativo;
     }
 
 }
 
 
 $ppp = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
-$fff = $ppp::getNome();
+$fff = $ppp->getDescr();
 echo $fff;
+echo $ppp->getGuid();
 
+$lista[] = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
+
+$lista[] = new Produto(null, '8A01', 'Kuki', 'sapato', 'foto', true);
+$lista[] = new Produto(null, '8A01', 'Lola', 'sapato', 'foto', true);
+
+foreach($lista as $item){
+    echo $item->getNome();
+}
 
 //database
 

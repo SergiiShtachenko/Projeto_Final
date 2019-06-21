@@ -1,9 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="angularApp"> <!-- definir angular app -->
     <head>
-
+        <meta charset="utf-8"/>
+        <title>AMF - Plataforma on-line</title>      
+        <link rel="stylesheet" href="/css/produto.css">
     </head>
 
     <body>
-       
+        <table class="orProductList">
+            <tr class="orProd">
+                <td><img src="img/product/low/prdXf1.jpg"></td>
+                <td>
+                    <h3>X-O2</h3>
+                    <h5>8A01.20</h5>
+                </td>                    
+                <td>
+                    <h3>DESCRIÇÃO:</h3>
+                    <h4 class="yellowBGcolor">S3 | SRC | HRO</h4>
+                </td>
+                <td>
+                    <h3>PRICE</h3>
+                    <h4 class="yellowBGcolor">33,50€</h4>
+                </td>
+                <td>
+                    
+                    <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
