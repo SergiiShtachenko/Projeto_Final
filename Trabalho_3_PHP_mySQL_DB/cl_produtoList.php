@@ -1,6 +1,6 @@
 <?php 
     include ('config/init.php');
-    include ('models/produto.php');
+    include ('molels/produto.php');
     include ('database/produto.php');
 
     $listaVer = getAllProdutos();

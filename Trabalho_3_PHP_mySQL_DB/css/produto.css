@@ -1,33 +1,30 @@
 /*--------Lista dos produtos--------*/
-.orProductList td {
+.lstProdutos{
+    margin: 10% 10% 0;
+}
+
+.orProductList td {    
     margin: 0;
     padding: 0 20px;
-}
-
-.orSizeTab td {
-    height: -10px;
     border-bottom: 1px solid darkgray;
 }
-.orSizeForm{
-    display: none;
+.orProd img{
+    height: 15%;
 }
-
-.orProd{
-    height: 150px;   
-}
-
 .orProd h3{
     margin: 2px 12px;
     font-family:Roboto,sans-serif;
+    text-align: center;
 }
 .orProd h4{
     margin: 2px 5px;
     font-family:Roboto,sans-serif;
-    text-align: center;
+    text-align: left;
 }
 .orProd h5{
     margin: 1px 5px;
     font-family:Roboto,sans-serif;
+    text-align: center;
 }
 .orProd button{
     margin-top: 20px; 
@@ -43,7 +40,15 @@
 .nonStrong{
     font-weight: normal;    
 }
-.yellowBGcolor{
+.yellowBGcolorDes{
+    width: 100%;
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
+}
+.yellowBGcolorPr{
+    width: 70%;
     background-color: #fbba28;
     border-radius: 10px;
     padding: 0 10px;
