@@ -7,6 +7,9 @@
         <?php echo file_get_contents("css/produto.css"); ?>
         <?php echo file_get_contents("css/header.css"); ?>
         </style>
+        <script>
+        <?php echo file_get_contents("js/header.css"); ?>
+        </script>  
     </head>    
     <body>
         <header>

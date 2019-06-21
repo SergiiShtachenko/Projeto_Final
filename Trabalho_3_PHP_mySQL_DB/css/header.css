@@ -79,3 +79,29 @@
     text-decoration: none;
     color: black;
 }
+.blocoDePesquisa{
+    position: fixed;
+    top: 82px;
+    z-index: 90; 
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background-color: #fbba28;
+    color: #0a140c;
+    
+}
+.linhaDePesquisa{
+    position: fixed;
+    display: 
+    top: 90px;
+    left: 25%;
+    z-index: 100; 
+    background-color: #dddcd8;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   font-family:Roboto,sans-serif;
+   font-size: 14pt;
+   line-height: 20pt;
+   width: 50%;
+    
+ }

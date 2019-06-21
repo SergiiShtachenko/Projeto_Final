@@ -1,11 +1,15 @@
-<section class = "lstProdutos">
+<section class="blocoDePesquisa">
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
-    <table class="orProductList">
-<?php
-    
+    <input type="text" class="linhaDePesquisa" onkeyup="procuraNome()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>    
+</section>
+<section class = "lstProdutos">
+    <table class="orProductList">   
+<?php    
     foreach($listaVer as $item){
         if($item->getAtivo()){
 ?>
+
+
         <tr class="orProd">
             <td width="70"><img class="showProd" src="images/produtos/<?php echo $item->getFoto(); ?>"></td>
             <td width="80">
@@ -23,13 +27,17 @@
             <td width="150">
                 <form action="action_add_to_order.php" method="POST">
                 <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
-                <input class="yellowBitton" type="submit" value="Encomendar">
-                <!--<button type="button" onclick="ordShow('ordPr1')">Encomendar</button>-->
+                <!--<input class="yellowBitton" type="submit" value="Encomendar">-->
+                <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
             </td>
         </tr>
+
+
 <?php
         }
     }
 ?>
+
+
     </table>
 </section>

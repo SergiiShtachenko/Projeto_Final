@@ -1,6 +1,6 @@
 /*--------Lista dos produtos--------*/
 .lstProdutos{
-    margin: 5% 10% 0 10%;
+    margin: 7% 10% 0 10%;
 }
 
 .orProductList td {    
@@ -65,3 +65,4 @@
     font-size: 12pt;
     font-weight: bold;
 }
+
