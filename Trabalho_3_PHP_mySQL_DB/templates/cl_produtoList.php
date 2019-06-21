@@ -1,4 +1,5 @@
 <section class = "lstProdutos">
+    <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <table class="orProductList">
 <?php
     
@@ -20,8 +21,10 @@
                 <h4 class="yellowBGcolorPr"><?php echo $item->getPrice(). ' €'; ?></h4>
             </td>
             <td width="150">
-                
-                <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
+                <form action="action_add_to_order.php" method="POST">
+                <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
+                <input class="yellowBitton" type="submit" value="Encomendar">
+                <!--<button type="button" onclick="ordShow('ordPr1')">Encomendar</button>-->
             </td>
         </tr>
 <?php

@@ -7,10 +7,9 @@ Create Table produto(
 	guid VARCHAR PRIMARY KEY DEFAULT uuid_generate_v4(),
 	reference VARCHAR NOT NULL UNIQUE,
 	nome VARCHAR NOT NULL UNIQUE,
-	descricao VARCHAR NOT NULL,
-	tamanhomin INTEGER NOT NULL CHECK (tamanhoMin >= 0),
-	tamanhomax INTEGER NOT NULL CHECK (tamanhoMax > tamanhoMin),
+	descricao VARCHAR NOT NULL,	
 	foto VARCHAR,
+	price NUMERIC(5,2) NOT NULL DEFAULT 0,
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	regdate TIMESTAMP DEFAULT NOW()
 );

@@ -1,6 +1,6 @@
 /*--------Lista dos produtos--------*/
 .lstProdutos{
-    margin: 10% 10% 0;
+    margin: 5% 10% 0 10%;
 }
 
 .orProductList td {    
@@ -53,4 +53,15 @@
     border-radius: 10px;
     padding: 0 10px;
     line-height: 22pt;
+}
+.yellowBitton{
+    margin-top: 20px; 
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
 }
