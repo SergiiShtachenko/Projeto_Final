@@ -6,10 +6,7 @@
         <style>
             <?php echo file_get_contents("css/produto.css"); ?>
             <?php echo file_get_contents("css/header.css"); ?>
-        </style>
-        <script>
-            <?php echo file_get_contents("js/header.css"); ?>
-        </script>  
+        </style>        
     </head>    
     <body>
         <header>
@@ -23,7 +20,7 @@
                     <li class="navEl"><a class="navLink" href="#order">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#pending">Encomendas</a></li>
                     <li class="navEl"><a class="navLink" href="#editDates">Alterar dados</a></li>
-                    <a href="function showPesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
+                    <a  href="javascript: showHidePesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
                 </ul>
             </nav>
         </header>

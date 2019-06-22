@@ -25,7 +25,7 @@
                     <li class="navEl"><a class="navLink" href="#price">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#alloredes">Encomendas</a></li>
                 </ul>
-                <a href="function showPesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
+                <a href="javascript: showHidePesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
             </nav>
 
         </header>

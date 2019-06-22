@@ -1,10 +1,11 @@
-<section class="blocoDePesquisa">
-    <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
-    <input type="text" class="linhaDePesquisa" onkeyup="procuraNome()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>    
+<section class="blocoDePesquisa">    
+    <input type="text" class="linhaDePesquisa" onkeyup="filtrar()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>
+     
 </section>
 <section class = "lstProdutos">
+    <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <table class="orProductList">   
-<?php    
+<?php
     foreach($listaVer as $item){
         if($item->getAtivo()){
 ?>
