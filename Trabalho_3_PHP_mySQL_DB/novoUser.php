@@ -26,5 +26,5 @@ function saveNewUser(){
 }
 
 saveNewUser();
-
+echo "Registo criado com sucesso!"
 ?>
