@@ -6,7 +6,10 @@
         <style>
             <?php echo file_get_contents("css/produto.css"); ?>
             <?php echo file_get_contents("css/header.css"); ?>
-        </style>        
+        </style>
+        <script defer>
+            <?php echo file_get_contents("js/header.js"); ?>
+        </script>        
     </head>    
     <body>
         <header>

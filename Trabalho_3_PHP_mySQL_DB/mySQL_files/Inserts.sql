@@ -10,6 +10,3 @@ INSERT INTO utilizador(email, palavrapasse, nome, telefon, cliente, permissao)
 INSERT INTO utilizador(email, palavrapasse, nome, telefon, cliente, permissao)
 				VALUES('user', md5('user'), 'admin', 'n/a', (SELECT guid FROM cliente WHERE nome = 'CLiente 1'), 0);
 
-
-
-

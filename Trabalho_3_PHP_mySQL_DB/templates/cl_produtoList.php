@@ -1,7 +1,15 @@
-<section class="blocoDePesquisa">    
-    <input type="text" class="linhaDePesquisa" onkeyup="filtrar()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>
-     
+<script defer>
+    <?php echo file_get_contents("js/prodList.js"); ?>
+</script>
+
+<a href="javascript: showHidePesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
+<section class="blocoDePesquisa">
+    
+        <input type="text" class="linhaDePesquisa" onkeyup="filtrar()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>
+        <a href="javascript: showHidePesquisa()"><img id="fecharImg" src="images/fechar.png" alt="fchar"></a>
+    
 </section>
+
 <section class = "lstProdutos">
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <table class="orProductList">   

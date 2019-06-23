@@ -66,3 +66,41 @@
     font-weight: bold;
 }
 
+/*Barra de pesquisa*/
+#PesquiarImg{
+    position: fixed;
+    right: 1%;
+    top: 30px;
+    z-index: 105;
+    max-height: 40px;
+}
+.blocoDePesquisa{
+    position: fixed;
+    display: none;
+    top: 82px;
+    z-index: 90; 
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: #fbba28;
+    padding-top: 10px;
+}
+.linhaDePesquisa{    
+    margin-left: 25%;
+    z-index: 100;
+    background-color: #dddcd8;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   font-family:Roboto,sans-serif;
+   font-size: 14pt;
+   line-height: 18pt;
+   width: 50%;    
+ }
+ #fecharImg{
+    display: inline;
+    margin-bottom: -5px;
+    z-index: 105;
+    max-height: 25px;
+}
+

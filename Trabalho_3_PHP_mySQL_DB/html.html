@@ -2,40 +2,103 @@
 <html ng-app="angularApp"> <!-- definir angular app -->
     <head>
         <meta charset="utf-8"/>
-        <title>AMF - Plataforma on-line</title>      
-        <link rel="stylesheet" href="/css/produto.css">
     </head>
+    <script defer>
+        function filtrar() {
+            let input = document.getElementsByClassName("linhaDePesquisa")[0];
+            let filter = input.value.toUpperCase();
+            console.log(filter);
+            let table = document.getElementsByClassName("orProductList")[0];
+            console.log(table);
+            let tr = table.getElementsByTagName("tr");
+            for(let i = 0; i < tr.length; i++){
+                //let tr = table[i].getElementsByTagName("tr");
+                console.log(tr[i]);
+                let txtValue = tr[i].textContent || tr[i].innerText;
+                if(txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = "";
+                else tr[i].style.display = "none";
+            }
+                      
+        }
+        
+        function nada(){
+            if(textLine.toUpperCase().indexOf(serchNonCase) > -1) lines[i].style.display = "block";
+            for(let i = 0; i < table.length; i++){
+                let tr = table[i].getElementsByTagName("tr");
+                console.log(tr);
+            }
+            for (let i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                let txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                } 
+            }
+        }
+            
+    </script>
 
     <body>
-        <table class="orProductList">
-            <tr class="orProd">
-                <td><img src="img/product/low/prdXf1.jpg"></td>
-                <td>
-                    <h3>X-O2</h3>
-                    <h5>8A01.20</h5>
-                </td>                    
-                <td>
-                    <h3>DESCRIÇÃO:</h3>
-                    <h4 class="yellowBGcolor">S3 | SRC | HRO</h4>
-                </td>
-                <td>
-                    <h3>PRICE</h3>
-                    <h4 class="yellowBGcolor">33,50€</h4>
-                </td>
-                <td>
-                        <form action="action_add_to_order.php" method="POST">
-                        <input type="hidden" name="guidProduto" value="">
-                        <input type="submit" value="Encomendar">
-                    <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
-                </td>
-            </tr>
-        </table>
-        <section>
-                <a href="function showPesquisa()"><img id="Pesquiar" src="images/Pesquisar2.png" alt="ToWorkFor"></a>
-        </section>
+        <input type="text" class="linhaDePesquisa" onkeyup="filtrar()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>
 
-        <script defer>
-        </script>
+        <article></article>
+        <table class="orProductList">   
+        
+        
+        
+                <tr class="orProd">
+                    <td width="70"><img class="showProd" src="images/Pesquisar2.png"></td>
+                    <td width="80">
+                        <h3>lola</h3>
+                        <h5>2222</h5>
+                    </td>                    
+                    <td width="400">
+                        <h3>DESCRIÇÃO:</h3>
+                        <h4 class="yellowBGcolorDes">ttttt</h4>
+                    </td>
+                    <td width="80">
+                        <h3>PRICE</h3>
+                        <h4 class="yellowBGcolorPr"><?php echo $item->getPrice(). ' €'; ?></h4>
+                    </td>
+                    <td width="150">
+                        <form action="action_add_to_order.php" method="POST">
+                        <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
+                        <!--<input class="yellowBitton" type="submit" value="Encomendar">-->
+                        <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
+                    </td>
+                </tr>
+
+                <tr class="orProd">
+                        <td width="70"><img class="showProd" src="images/Pesquisar2.png"></td>
+                        <td width="80">
+                            <h3>cuca</h3>
+                            <h5>1111</h5>
+                        </td>                    
+                        <td width="400">
+                            <h3>DESCRIÇÃO:</h3>
+                            <h4 class="yellowBGcolorDes">bbbb</h4>
+                        </td>
+                        <td width="80">
+                            <h3>PRICE</h3>
+                            <h4 class="yellowBGcolorPr"><?php echo $item->getPrice(). ' €'; ?></h4>
+                        </td>
+                        <td width="150">
+                            <form action="action_add_to_order.php" method="POST">
+                            <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
+                            <!--<input class="yellowBitton" type="submit" value="Encomendar">-->
+                            <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
+                        </td>
+                    </tr>
+        
+        
+        
+        
+        
+            </table>
     </body>
 
 </html>

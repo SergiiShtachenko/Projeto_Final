@@ -7,8 +7,8 @@
             <?php echo file_get_contents("css/produto.css"); ?>
             <?php echo file_get_contents("css/header.css"); ?>
         </style>
-        <script>
-            <?php echo file_get_contents("js/header.css"); ?>
+        <script defer>
+            <?php echo file_get_contents("js/header.js"); ?>
         </script>
     </head>    
     <body>
@@ -24,8 +24,7 @@
                     <li class="navEl"><a class="navLink" href="#product">Clientes</a></li>
                     <li class="navEl"><a class="navLink" href="#price">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#alloredes">Encomendas</a></li>
-                </ul>
-                <a href="javascript: showHidePesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
+                </ul>                
             </nav>
 
         </header>
