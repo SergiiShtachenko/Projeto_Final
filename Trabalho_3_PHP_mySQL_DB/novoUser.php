@@ -1,18 +1,30 @@
 <?php    
-include ('models/utilizador.php')
 
-$utilizador= new Utilizador (null, $_POST['email'], $_POST['palavrapasse'], $_POST['nome'], $_POST['telefon'], $_POST['cliente'], $_POST['permissao'], $_POST['ativo'])
+
+
 
 function saveNewUser(){
-    global $dblink;
+  include ('config/init_p.php');
 
-    $stmt = $dblink->prepare('INSERT INTO utilizador (email, palavrapasse, nome, telefon) VALUES (?, ?, ?, ?)');
-   
-    $stmt->execute(array($utilizador.getEmail(), $utilizador.getPalavraPasse(), $utilizador.getNome(), $utilizador.getTelefon()));
+ 
+  $email=$_POST['email'];
+  $palavrapasse=$_POST['password'];
+  $nome=$_POST['nome'];
+  $telefone=$_POST['Telefone'];
 
-    return $stmt->fetchAll();
-    
-    
-  }
-  saveNewUser();
+  //teste se passa valores para página
+  //echo $email, $palavrapasse, $nome, $telefone;
+  
+  $stmt = $dblink->prepare("INSERT INTO utilizador(email, palavrapasse, nome, telefon, cliente, permissao) VALUES('$email', md5('$palavrapasse'), '$nome', '$telefone', (SELECT guid FROM cliente WHERE nome = 'CLiente 1'), 0);");
+  
+  
+  $stmt->execute();
 
+  return $stmt->fetchAll(); 
+  
+  
+}
+
+saveNewUser();
+
+?>
