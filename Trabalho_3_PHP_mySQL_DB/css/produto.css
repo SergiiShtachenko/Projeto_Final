@@ -1,6 +1,6 @@
 /*--------Lista dos produtos--------*/
 .lstProdutos{
-    margin: 7% 10% 0 10%;
+    margin: 100px 10% 0 10%;
 }
 
 .orProductList td {    
@@ -103,4 +103,75 @@
     z-index: 105;
     max-height: 25px;
 }
+
+/*--------Edição do Produto--------*/
+
+.alterProduto{
+    margin: 150px 0 0 25%;
+    width: auto;
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    display: table;
+    text-align: center;
+}
+#alterPr{
+    margin-top: 20px;
+}
+input[name=refPr], [name=pricePr]{
+    width: 120px;
+    padding: 10px;
+    color: black;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+}
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[name=nomePr]{
+    width: 230px;
+    padding: 10px;
+    color: black;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+}
+input[name=descPr]{    
+    width: 379px;
+    padding: 10px;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+}
+input[type="file"]{
+    display: none;
+}
+.uploadFile{
+    color: #fbba28;
+    padding: 11px 32px 11px 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: black; 
+}
+input[type=submit]{
+    color: #fbba28;
+    width: 150px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: black;    
+}
+
+
 

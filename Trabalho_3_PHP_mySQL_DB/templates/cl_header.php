@@ -23,7 +23,6 @@
                     <li class="navEl"><a class="navLink" href="#order">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#pending">Encomendas</a></li>
                     <li class="navEl"><a class="navLink" href="#editDates">Alterar dados</a></li>
-                    <a  href="javascript: showHidePesquisa()"><img id="PesquiarImg" src="images/Pesquisar2.png" alt="Pesquisar"></a>
                 </ul>
             </nav>
         </header>

@@ -1,104 +1,79 @@
 <!DOCTYPE html>
-<html ng-app="angularApp"> <!-- definir angular app -->
+<html>
     <head>
         <meta charset="utf-8"/>
-    </head>
-    <script defer>
-        function filtrar() {
-            let input = document.getElementsByClassName("linhaDePesquisa")[0];
-            let filter = input.value.toUpperCase();
-            console.log(filter);
-            let table = document.getElementsByClassName("orProductList")[0];
-            console.log(table);
-            let tr = table.getElementsByTagName("tr");
-            for(let i = 0; i < tr.length; i++){
-                //let tr = table[i].getElementsByTagName("tr");
-                console.log(tr[i]);
-                let txtValue = tr[i].textContent || tr[i].innerText;
-                if(txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = "";
-                else tr[i].style.display = "none";
-            }
-                      
-        }
-        
-        function nada(){
-            if(textLine.toUpperCase().indexOf(serchNonCase) > -1) lines[i].style.display = "block";
-            for(let i = 0; i < table.length; i++){
-                let tr = table[i].getElementsByTagName("tr");
-                console.log(tr);
-            }
-            for (let i = 0; i < tr.length; i++) {
-                let td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                let txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-                } 
-            }
-        }
-            
-    </script>
-
+        <title>AMF - Plataforma on-line</title>      
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/produto.css">
+        <script src="js/header.js" defer></script>
+        <script src="js/prodList.js" defer></script>   
+    </head>    
     <body>
-        <input type="text" class="linhaDePesquisa" onkeyup="filtrar()" placeholder="Pode procurar pelo reference, nome ou descritivo"/>
-
-        <article></article>
-        <table class="orProductList">   
-        
-        
-        
-                <tr class="orProd">
-                    <td width="70"><img class="showProd" src="images/Pesquisar2.png"></td>
-                    <td width="80">
-                        <h3>lola</h3>
-                        <h5>2222</h5>
-                    </td>                    
-                    <td width="400">
-                        <h3>DESCRIÇÃO:</h3>
-                        <h4 class="yellowBGcolorDes">ttttt</h4>
-                    </td>
-                    <td width="80">
-                        <h3>PRICE</h3>
-                        <h4 class="yellowBGcolorPr"><?php echo $item->getPrice(). ' €'; ?></h4>
-                    </td>
-                    <td width="150">
-                        <form action="action_add_to_order.php" method="POST">
-                        <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
-                        <!--<input class="yellowBitton" type="submit" value="Encomendar">-->
-                        <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
-                    </td>
-                </tr>
-
-                <tr class="orProd">
-                        <td width="70"><img class="showProd" src="images/Pesquisar2.png"></td>
-                        <td width="80">
-                            <h3>cuca</h3>
-                            <h5>1111</h5>
-                        </td>                    
-                        <td width="400">
-                            <h3>DESCRIÇÃO:</h3>
-                            <h4 class="yellowBGcolorDes">bbbb</h4>
+        <header>
+            <section id="yellowLine">
+                Olá <span id="userName">nome</span><a href="#">Sair</a>
+            </section>
+            <a href="https://www.toworkfor.pt"><img id="twfLogoMini" src="images/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
+            <!-- Navigação -->
+            <nav class="topNav" id="topNavCL" role="navigation">            
+                <ul class="navConteiner">
+                    <li class="navEl"><a class="navLink" href="#order">Produtos</a></li>
+                    <li class="navEl"><a class="navLink" href="#pending">Encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="#editDates">Alterar dados</a></li>
+                </ul>
+            </nav>
+        </header>
+   
+        <section class="alterProduto">
+            <article class="pageNome">CRIAR ARTIGO</article>
+            <article id="alterPr">
+                <table>
+                    <tr>
+                        <td>
+                            <form name="alterProduto" action="" method="POST">
+                                    <p>
+                                        <input type="text" name="refPr" placeholder="Reference do artigo *" required="preenchimento obrigatório">
+                                        <input type="text" name="nomePr" placeholder="Nome do artigo *" required="preenchimento obrigatório" maxlength="15">
+                                        <input type="number" name="pricePr" step="0.01" min="0" placeholder="Preço do artigo *" required="preenchimento obrigatório" maxlength="15">
+                                    </p>
+                                    <p>
+                                        <input type="text" name="descPr" placeholder="Descritivo do artigo *" required="preenchimento obrigatório">
+                                        <label class="uploadFile">
+                                            <input type="file" name="fotoPr" onchange="showFile()"/>
+                                            Foto do Artigo
+                                        </label>
+                                    </p>
+                                    <p><input type="submit" value="Enviar" onclick="return validarPass()"></p>
+                                </form>
                         </td>
-                        <td width="80">
-                            <h3>PRICE</h3>
-                            <h4 class="yellowBGcolorPr"><?php echo $item->getPrice(). ' €'; ?></h4>
-                        </td>
-                        <td width="150">
-                            <form action="action_add_to_order.php" method="POST">
-                            <input type="hidden" name="guidProduto" value="<?php echo $item->getGuid(); ?>">
-                            <!--<input class="yellowBitton" type="submit" value="Encomendar">-->
-                            <button type="button" onclick="ordShow('ordPr1')">Encomendar</button>
-                        </td>
+                        <td>
+                            <img class="swowFoto" src="images/produtos/No_image.png" height="150"  alt="Image preview...">
+                        </td>                
                     </tr>
-        
-        
-        
-        
-        
-            </table>
-    </body>
+                </table>
+            </article>
+        </section>
+        <script>
+            function showFile(){
+                var img = document.querySelector(".swowFoto");
+                var file = document.querySelector('input[type=file]').files[0];
+                
+                var fileReader = new FileReader();
+                fileReader.onloadend = function () {
+                    img.src = fileReader.result;
+                }
 
+                if (file) {
+                    fileReader.readAsDataURL(file);
+                } else {
+                    img.src = "images/produtos/No_image.png";
+                }
+            }            
+        </script>
+
+        
+        <footer>
+    Um FOOTER do adminstrador
+    </footer>
+    </body>     
 </html>

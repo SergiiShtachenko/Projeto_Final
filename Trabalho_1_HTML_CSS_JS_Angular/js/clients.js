@@ -16,7 +16,7 @@ function procuraNome() {
             tr[i].style.display = "none";
         }
         } 
-    }
+    } 
 }
 function procuraNIF() {
     var input, filter, table, tr, td, i, txtValue;
