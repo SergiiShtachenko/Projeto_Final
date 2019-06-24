@@ -1,18 +1,24 @@
 <section class="alterProduto">
-    <article class="pageNome">CRIAR ARTIGO</article>
+    <article class="pageNome">        
+        <?php 
+            if($prod->getGuid() == "") echo 'CRIAR ARTIGO';
+            else echo 'EDITAR ARTIGO';
+        ?>
+    </article>
     <article id="alterPr">
         <table>
             <tr>
                 <td>
                     <form name="alterProduto" action="action_produto_edit.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="guidPr" value="">
+                        <input type="hidden" name="guidPr" value="<?php echo $prod->getGuid();?>">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" required="Foto demasiado grande">
                             <p>
-                                <input type="text" name="refPr" placeholder="Reference do artigo *" required="preenchimento obrigatório">
-                                <input type="text" name="nomePr" placeholder="Nome do artigo *" required="preenchimento obrigatório" maxlength="15">
-                                <input type="number" name="pricePr" step="0.01" min="0" placeholder="Preço do artigo *" required="preenchimento obrigatório" maxlength="15">
+                                <input type="text" name="refPr" value="<?php echo $prod->getRef(); ?>" placeholder="Reference do artigo *" required="preenchimento obrigatório">
+                                <input type="text" name="nomePr" value="<?php echo $prod->getNome(); ?>" placeholder="Nome do artigo *" required="preenchimento obrigatório" maxlength="15">
+                                <input type="number" name="pricePr" value="<?php echo $prod->getPrice(); ?>" step="0.01" min="0" placeholder="Preço do artigo *" required="preenchimento obrigatório" maxlength="15">
                             </p>
                             <p>
-                                <input type="text" name="descPr" placeholder="Descritivo do artigo *" required="preenchimento obrigatório">
+                                <input type="text" name="descPr" value="<?php echo $prod->getDescr(); ?>" placeholder="Descritivo do artigo *" required="preenchimento obrigatório">
                                 <label class="uploadFile">
                                     <input type="file" name="fotoPr" accept=".gif,.jpg,.jpeg,.png" onchange="showFile()">
                                     Foto do Artigo
@@ -22,7 +28,7 @@
                         </form>
                 </td>
                 <td>
-                    <img class="swowFoto" src="images/produtos/No_image.png" height="150"  alt="Image preview...">
+                    <img class="swowFoto" src="images/produtos/<?php echo $prod->getFoto() . '.jpg'; ?>" height="150"  alt="Image preview...">
                 </td>                
             </tr>
         </table>
@@ -41,7 +47,7 @@
         if (file) {
             fileReader.readAsDataURL(file);
         } else {
-            img.src = "images/produtos/No_image.png";
+            img.src = "images/produtos/<?php echo $prod->getFoto() . '.jpg'; ?>";
         }
     }            
 </script>

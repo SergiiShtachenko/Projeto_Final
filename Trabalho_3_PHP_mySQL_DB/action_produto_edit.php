@@ -18,21 +18,12 @@
         true
     );     
 
-    move_uploaded_file($_FILES['fotoPr']['tmp_name'], 'images/produtos/'. $prod->getRef() . '.jpg');
-    
-    global $dblink;
+    $confirm = updateProduto($prod);
 
-    if($prod->getGuid() == ""){ // Mode de Criação
-        echo $prod->getDescr();
-        $stmt = $dblink->prepare('INSERT INTO produto(reference, nome, descricao, foto, price) VALUES(?, ?, ?, ?, ?)');
-        $stmt->execute(array($prod->getRef(), $prod->getNome(), $prod->getDescr(), $prod->getFoto(), $prod->getPrice()));
-    }
-    // else{ // Mode de edição
-    //     $stmt = $dblink->prepare('UPDATE produto SET reference = ? nome = ?, descricao = ?, foto = ?, price = ?;');
-    // }
+    //echo $confirm;
+    if($confirm !== false) header ('Location: produto_list_ad.php');
+    else echo 'ERRO QQ'.$confirm;
     
-    
-
 
     // if ($result !== false) {
     //     //$_SESSION['success_message'] = "Product updated succesfuly!";

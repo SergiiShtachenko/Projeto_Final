@@ -35,5 +35,5 @@
     public function getAtivo(){ return $this->_ativo; }
     }
 
-    echo $_POST['Produto']->getDescr;
+    echo $_POST['Produto'];
 ?>

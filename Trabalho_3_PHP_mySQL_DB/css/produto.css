@@ -2,6 +2,14 @@
 .lstProdutos{
     margin: 100px 10% 0 10%;
 }
+.headePage{
+    width: 100%;
+}
+.headePage input[type=submit]{
+    background:url('images/add.png');
+    width: 48px;
+    height: 48px;
+}
 
 .orProductList td {    
     margin: 0;
@@ -37,6 +45,12 @@
     font-size: 12pt;
     font-weight: bold;
     color: black;
+}
+
+.delProduto input[type=submit]{
+    background:url('images/dell.png');
+    width: 30px;
+    
 }
 .orProd button{
     margin-top: 20px; 
