@@ -25,10 +25,12 @@
 
     class PrdTamanho{
         private $_guidPr;
+        private $_price;
         private $_lstTamanhos = array();
 
-        public function __construct($guidPr,$t35, $t36, $t37, $t38, $t39, $t40, $t41, $t42, $t43, $t44, $t45, $t46, $t47, $t48){ 
+        public function __construct($guidPr, $_price, $t35, $t36, $t37, $t38, $t39, $t40, $t41, $t42, $t43, $t44, $t45, $t46, $t47, $t48){ 
             $this->_guidPr = $guidPr;
+            $this->_price = $_price;
             $this->_lstTamanhos = array(
                 '35' => $t35,
                 '36' => $t36,
@@ -47,9 +49,21 @@
             );
         }
     
-        public function getLstTamanhos(){ return $this->_guidPr; }
+        public function getPrdGuid(){ return $this->_guidPr; }
+
+        public function getPrdPrice(){ return $this->_price; }
         
         public function getLstTamanhos(){ return $this->_lstTamanhos; }
+
+        public function getTotalQtd(){
+            $total = 0;
+            foreach($this->_lstTamanhos as $tamanho){
+                $_lstTamanhos += $tamanho;
+            }
+            return $tamanho;
+        }
+
+        public function getTotalVal(){ return $this->_price * getTotalQtd(); }
 
     }    
 ?>

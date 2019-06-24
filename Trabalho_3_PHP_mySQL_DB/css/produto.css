@@ -9,6 +9,7 @@
     background:url('images/add.png');
     width: 48px;
     height: 48px;
+    border: none;
 }
 
 .orProductList td {    
@@ -49,6 +50,7 @@
 .delProduto input[type=submit]{
     background:url('images/dell.png');
     width: 30px;
+    border: none;
     
 }
 .orProd button{
@@ -117,6 +119,39 @@
     max-height: 25px;
 }
 /*--------Encomendar--------*/
+.totaisEnc{
+    position: fixed;
+    top: 25px;
+    right: 80px;
+    text-align: right   ;
+    z-index: 150;
+}
+.totaisEnc h3{
+    color: white;
+    font-size: 12pt;
+}
+.totaisEnc span{
+    padding: 0 5px;
+    line-height: 16pt;
+    font-family:Roboto,sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #fbba28;
+}
+.totaisEnc input[type=submit]{
+    margin-top: 10px;
+    margin-left: 30px; 
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: black;
+}
+
 .tmnForm{
     display: none;
 }

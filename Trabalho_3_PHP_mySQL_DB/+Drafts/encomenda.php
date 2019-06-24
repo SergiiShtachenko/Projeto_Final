@@ -50,7 +50,7 @@ class Produto {
 }
 
 
-$ppp = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
+$ppp = new Produto(null, '8A01', 'LOOOLA', 'sapato', 'foto', true);
 $fff = $ppp->getDescr();
 echo $fff . '<br>';
 echo $ppp->getGuid() . '<br>';
@@ -59,6 +59,7 @@ $lista[] = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
 
 $lista[] = new Produto(null, '8A01', 'Kuki', 'sapato', 'foto', true);
 $lista[] = new Produto(null, '8A01', 'Lola', 'sapato', 'foto', true);
+$lista[] = $ppp;
 
 foreach($lista as $item){
     echo $item->getNome() . '<br>';
