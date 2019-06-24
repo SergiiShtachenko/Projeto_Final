@@ -1,7 +1,7 @@
 <?php
     //database
     function getAllUtilizador(){
-        global $dblink;
+  
 
         $stmt = $dblink->prepare('SELECT * FROM utilizador');
         $stmt->execute();
@@ -13,5 +13,5 @@
         }
         return $listaUser;
     }
-
 ?>
+   
