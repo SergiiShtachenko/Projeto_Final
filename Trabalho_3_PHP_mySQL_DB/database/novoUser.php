@@ -1,7 +1,7 @@
 <?php    
 
 function saveNewUser(){
-  include ('config/init_p.php');
+  include ('../config/init_p.php');
 
  
   $email=$_POST['email'];

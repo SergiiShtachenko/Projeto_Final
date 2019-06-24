@@ -1,6 +1,6 @@
 <?php
     // Config
-    include ('config/init_p.php');
+    //include ('config/init_p.php');
 
     // Models
     class Cliente {

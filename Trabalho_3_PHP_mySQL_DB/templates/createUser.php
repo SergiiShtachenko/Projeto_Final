@@ -6,7 +6,7 @@
 <section class="RegistoNovoUser">
       
         <article id="NovoUser">
-            <form name="registoUtilizador" action="novoUser.php" method="POST">
+            <form name="registoUtilizador" action="../database/novoUser.php" method="POST">
                 <p class="Username">
                    <input type="email" name="email" placeholder="Email *"required="preenchimento obrigatório"></p>
                 <p class="Password">
