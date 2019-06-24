@@ -11,11 +11,30 @@
     color: #0a140c;
     text-align: right
 }
+input[name=user], [name=password] {
+    
+    width: 300px;
+    padding: 10px;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+  
+}
+
 #userName{
+    width: 500px;
+    padding: 10px;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
     margin-right: 10px;
     font-size: 18px;
     line-height: 22px;
-    color: white;
+
 }
 #twfLogoMini{
     position: fixed;
