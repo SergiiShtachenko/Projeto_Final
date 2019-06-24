@@ -6,7 +6,7 @@
   <!--Pásina de Registo-->
       <section class="RegistoNovoCliente">
           <article id="NovoCliente">
-              <form name="registoCliente" action="novoCliente.php" method="POST">                  
+              <form name="registoCliente" action="../database/novoCliente.php" method="POST">                  
                   <p class="Dados">
                       <input type="text" name="nome" placeholder="Nome da Empresa *" required="preenchimento obrigatório" ></p>
                       <p><input type="text" name="nif" placeholder="NIF *" required="preenchimento obrigatório" ></p>
