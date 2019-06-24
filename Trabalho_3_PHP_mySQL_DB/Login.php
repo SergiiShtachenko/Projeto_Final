@@ -30,16 +30,17 @@
     } 
     
     function redirect($userRole){
-        $location='produto_list_cl.php';
+        //$location='produto_list_cl.php';
         if ($userRole == 1){
             $location='templates/tpl_clientsList.php';
+        }else{
+            if($userRole==0){
+                $location='produto_list_cl.php';
+            }else{
+                $location='index.php';
+            }
         }
-        if($userRole==null){
-            $location='index.php';
-        }
-        
         header("Location: $location");
-
     }
     
     checkLogin();   
