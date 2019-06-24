@@ -1,9 +1,12 @@
 <link rel="stylesheet" href="../css/clients.css">
+<link rel="stylesheet" href="../css/header.css">
     <script src="../js/clients.js"></script>
 <!-------fim header------->
 <?php  include ('../listaClientsVer.php'); ?>
 <!-------lista_utilizadores.php------->
 <section>
+<br>
+   <br> 
   <h1>Clientes</h1>
   <table id="clients">
   <tr>

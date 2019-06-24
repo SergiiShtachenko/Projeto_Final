@@ -1,39 +1,47 @@
 <?php
-  //include ('config/init_p.php');
-  //include ('database/usersList.php'); 
 
-  
-function checkLogin()
-{
-    include ('config/init_p.php');
-    $username = ($_POST['user']);
-    $password = ($_POST['password']);
+
+    function checkLogin() {
+        include ('config/init_p.php');
+        
+        $username = $_POST['user'];
+        $password = $_POST['password'];
+
+        $stmt = $dblink->prepare("SELECT guid, email, palavrapasse, permissao FROM utilizador WHERE email='$username'");
+        //$stmt->bind_param('ss', $username, $password);
+        $stmt->execute();
+        
+        while($row = $stmt->fetch()){
+            //$userPass [] = $row['email'];
+            if(md5($password) == $row['palavrapasse']){
+                $_SESSION['username'] = $username;
+                $_SESSION['userID'] = $row['guid'];
+                $_SESSION['role'] = $row['permissao'];
+                redirect($_SESSION['role']);                
+                print_r ($_SESSION);
+                echo 'Success! Username:'.$username;
+                echo ' Password:'.$password;
+                echo ' MD5Password:'.md5($password);
+                break;
+            }else{
+                echo "Login Inválido";             
+            };           
+        }         
+    } 
     
-    //testar se recebe
-    echo $username;
-    echo $password;
-    //liga BD
-    $stmt = $dblink->prepare('SELECT (email, palavrapasse) FROM utilizador WHERE email='$username' AND palavrapasse='$password');');
-    
-    $stmt->execute();
-
-    return $stmt->fetchAll(); 
-    //compara com BD
-    while($row = $stmt->fetch()){
-        $userPass = array($row['email'], $row['palavrapasse']);
-
-        echo $userPass[0];
-        echo $userPass[1];
-        if ($userPass[0]==$username || $userPass[1]==$password){
-            echo "Utilizador ou Palavra-Passe já conhecidas";
+    function redirect($userRole){
+        $location='produto_list_cl.php';
+        if ($userRole == 1){
+            $location='templates/tpl_clientsList.php';
         }
-        return true;        
+        if($userRole==null){
+            $location='index.php';
+        }
+        
+        header("Location: $location");
+
     }
     
-   
-}    
-
-   
-checkLogin();   
-//header("Location: index.php"); 
+    checkLogin();   
+    
 ?>
