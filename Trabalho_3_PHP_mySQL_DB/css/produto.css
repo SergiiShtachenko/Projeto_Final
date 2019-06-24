@@ -14,7 +14,6 @@
 .orProductList td {    
     margin: 0;
     padding: 0 20px;
-    border-bottom: 1px solid darkgray;
 }
 .orProd img{
     height: 15%;
@@ -117,6 +116,39 @@
     z-index: 105;
     max-height: 25px;
 }
+/*--------Encomendar--------*/
+.tmnForm{
+    display: none;
+}
+.tamanhos form{
+    text-align: center;
+    margin-top: -30px;
+}
+   
+.tamanhos td{
+    margin: -10px;
+    padding: 0 20px;
+    border-bottom: 1px solid darkgray;
+}
+
+.ordHide{
+    height: 30px;
+    margin-bottom: -10px;
+    margin-left: 20px;
+}
+.tamanhos input[type=submit]{
+    margin-top: 20px;
+    margin-left: 30px; 
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 22pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: black;
+}
 
 /*--------Edição do Produto--------*/
 
@@ -177,7 +209,7 @@ input[type="file"]{
     border: none;
     background-color: black; 
 }
-input[type=submit]{
+.alterProduto input[type=submit]{
     color: #fbba28;
     width: 150px;
     padding: 10px;

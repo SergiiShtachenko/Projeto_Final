@@ -1,70 +1,42 @@
 <?php
-// Listar produto 
+// Classes Encomenda
+class Encomenda {
+    private $_guid;
+    private $_dataEncomenda;
+    private $_dataEntrega;
+    private $_nrEncomenda;
+    private $_responcavel;
+    private $_cliente;
+    private $_lstProdutos[];
 
-// Classes
-class Produto {
-    protected $_guid;
-    protected $_ref;
-    protected $_nome;
-    protected $_descricao;
-    protected $_foto;
-    protected $_ativo;
-
-    public function __construct($guid, $ref, $nome, $descricao, $foto, $ativo){
+    public function __construct($guid, $dtEnc, $dtEntr, $nrEnc, $responsavel, $cliente){
         $this->_guid = $guid;
-        $this->_ref = $ref;
-        $this->_nome = $nome;
-        $this->_descricao = $descricao;
-        $this->_foto = $foto;
-        $this->_ativo = $ativo;
+        $this->_dataEncomenda = $dtEnc;
+        $this->_dataEntrega = $dtEntr;
+        $this->_nrEncomenda = $nrEnc;
+        $this->_responcavel = $responsavel;
+        $this->_cliente = $cliente;
     }
 
-    //Guid
+    
     public function getGuid(){
         return $this->_guid;
     }
-    //Ref
-    public function getRef(){
-        return $this->_ref;
+    public function getDtEnc(){
+        return $this->_dataEncomenda;
     }
-    //Nome
-    public function getNome(){
-        return $this->_nome;
+    public function getDtEnc(){
+        return $this->_dataEncomenda;
     }
-    
-    //Descrição
-    public function getDescr(){
-        return $this->_descricao;
+    public function getDtEntr(){
+        return $this->_dataEntrega;
+    }    
+    public function getResponçavel(){
+        return $this->_responcavel;
     }
-
-    //foto
-    public function getFoto(){
-        return $this->_foto;
+    public function getCliente(){
+        return $this->_cliente;
     }
-
-    //Ativo
-    public function getAtivo(){
-        return $this->_ativo;
-    }
-
 }
-
-
-$ppp = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
-$fff = $ppp->getDescr();
-echo $fff . '<br>';
-echo $ppp->getGuid() . '<br>';
-
-$lista[] = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
-
-$lista[] = new Produto(null, '8A01', 'Kuki', 'sapato', 'foto', true);
-$lista[] = new Produto(null, '8A01', 'Lola', 'sapato', 'foto', true);
-
-foreach($lista as $item){
-    echo $item->getNome() . '<br>';
-}
-
-//database
-
 
 ?>

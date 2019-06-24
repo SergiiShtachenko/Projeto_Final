@@ -23,6 +23,94 @@
                 </ul>
             </nav>
         </header>
+
+        <section class = "lstProdutos">
+                <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
+                <table class="orProductList">   
+            
+                    <form id="Ref" action="action_add_to_order.php" method="POST">
+                        <input  type="hidden" name="guidProduto" value="222222">
+                        <tr class="orProd">   
+                                <td><img class="showProd" src="images/produtos/8A1224.jpg"></td>
+                                <td>
+                                    <h3>Nome</h3>
+                                    <h5>Ref</h5>
+                                </td>                    
+                                <td  width="400">
+                                    <h3>DESCRIÇÃO:</h3>
+                                    <h4 class="yellowBGcolorDes">DDDDDDDDEEEEEESSSSCCCCRRRRR</h4>
+                                </td>
+                                <td>
+                                    <h3>PRICE</h3>
+                                    <h4 class="yellowBGcolorPr">22.33</h4>
+                                </td>
+                                <td>      
+                                    <input type="button" onclick="showOrder('ref')" value="Encomendar">
+                                </td>                    
+                        </tr>
+                        <tr class="tamanhos" id="Ref">
+                            <td colspan="7">
+                                <input class="orSize" name="T35" placeholder="35"size=3>
+                                <input class="orSize" name="T36" placeholder="36"size=3>
+                                <input class="orSize" name="T37" placeholder="37"size=3>
+                                <input class="orSize" name="T38" placeholder="38"size=3>
+                                <input class="orSize" name="T39" placeholder="39"size=3>
+                                <input class="orSize" name="T40" placeholder="40"size=3>
+                                <input class="orSize" name="T41" placeholder="41"size=3>
+                                <input class="orSize" name="T42" placeholder="42"size=3>
+                                <input class="orSize" name="T43" placeholder="43"size=3>
+                                <input class="orSize" name="T44" placeholder="44"size=3>
+                                <input class="orSize" name="T45" placeholder="45"size=3>
+                                <input class="orSize" name="T46" placeholder="46"size=3>
+                                <input class="orSize" name="T47" placeholder="47"size=3>
+                                <input class="orSize" name="T48" placeholder="48"size=3>
+                                <td><input type="button" value="^">
+                                <input type="submit" value="Encomendar">    
+                            </td>
+                        </tr>
+                    </form>
+            
+                </table>
+            </section>
+            <script>
+                function showOrder(ref){
+                    let line = document.createElement('tr');
+                    
+                    line.innerHTML = `<tr class="orSizeTab">
+                                        <td colspan="7">
+                                            <input class="orSize" name="T35" placeholder="35"size=3>
+                                            <input class="orSize" name="T36" placeholder="36"size=3>
+                                            <input class="orSize" name="T37" placeholder="37"size=3>
+                                            <input class="orSize" name="T38" placeholder="38"size=3>
+                                            <input class="orSize" name="T39" placeholder="39"size=3>
+                                            <input class="orSize" name="T40" placeholder="40"size=3>
+                                            <input class="orSize" name="T41" placeholder="41"size=3>
+                                            <input class="orSize" name="T42" placeholder="42"size=3>
+                                            <input class="orSize" name="T43" placeholder="43"size=3>
+                                            <input class="orSize" name="T44" placeholder="44"size=3>
+                                            <input class="orSize" name="T45" placeholder="45"size=3>
+                                            <input class="orSize" name="T46" placeholder="46"size=3>
+                                            <input class="orSize" name="T47" placeholder="47"size=3>
+                                            <input class="orSize" name="T48" placeholder="48"size=3>
+                                            <td><input type="button" value="^">
+                                            <input type="submit" value="Encomendar">    
+                                        </td>
+                                    </tr>`;
+
+                    let form = document.getElementById(ref);
+                    form.append(line);
+                    
+
+                    let remove = line.querySelector('input[type=button]'); 
+                    
+                    remove.addEventListener('click', function() {
+                        this.parentNode.parentNode.remove();
+                    }); 
+                    /*-------FIM 7-------*/ 
+
+                    event.preventDefault();
+                }
+            </script>
    
         <section class="alterProduto">
             <article class="pageNome">CRIAR ARTIGO</article>
@@ -30,23 +118,22 @@
                 <table>
                     <tr class="orSizeTab">
                         <td colspan="7">
-                            <form class="orSizeForm" id="ordPr1" action="">
-                                <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
-                                <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
-                                <button class="showSizes" type="button" onclick="ordHide('ordPr1')">^</button>
-                            </form>
+                            <input class="orSize" name="T35" placeholder="35"size=3>
+                            <input class="orSize" name="T36" placeholder="36"size=3>
+                            <input class="orSize" name="T37" placeholder="37"size=3>
+                            <input class="orSize" name="T38" placeholder="38"size=3>
+                            <input class="orSize" name="T39" placeholder="39"size=3>
+                            <input class="orSize" name="T40" placeholder="40"size=3>
+                            <input class="orSize" name="T41" placeholder="41"size=3>
+                            <input class="orSize" name="T42" placeholder="42"size=3>
+                            <input class="orSize" name="T43" placeholder="43"size=3>
+                            <input class="orSize" name="T44" placeholder="44"size=3>
+                            <input class="orSize" name="T45" placeholder="45"size=3>
+                            <input class="orSize" name="T46" placeholder="46"size=3>
+                            <input class="orSize" name="T47" placeholder="47"size=3>
+                            <input class="orSize" name="T48" placeholder="48"size=3>
+                            <td><input type="button" value="^">
+                            <input type="button"value="Encomendar">    
                         </td>
                     </tr>
                 </table>

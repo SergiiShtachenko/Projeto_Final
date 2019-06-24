@@ -1,0 +1,139 @@
+/*-----INDEX PAGE-----*/
+#yellowLine{
+    position: fixed;
+    top: 0;
+    z-index: 90; 
+    width: 99%;
+    height: 22px;
+    margin: 0;
+    padding-right: 15px;
+    background-color: #fbba28;
+    color: #0a140c;
+    text-align: right
+}
+input[name=user], [name=password] {
+    
+    width: 300px;
+    padding: 10px;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+  
+}
+
+#userName{
+    width: 500px;
+    padding: 10px;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 22px;
+
+}
+#twfLogoMini{
+    position: fixed;
+    top: 22px;
+    z-index: 101;
+    max-height: 60px;
+}
+
+.topNav{
+    position: fixed;
+    top: 22px;
+    z-index: 90; 
+    width: 100%;
+    height: 60px;
+    background-color: #0a140c;
+    font-size: 18px;
+    color: white;
+}
+.navConteiner{
+    margin-top: 0;
+    margin-left: 110px;
+    z-index: 95;
+}
+.navEl{     
+    display:inline-block;    
+    margin: 5px 0;    
+}
+.navLink{
+    margin: 0;
+    padding: 20px;
+    font-family:Roboto,sans-serif;
+    font-size: 15.5px;
+    line-height: 45px;
+    text-align:center;
+    text-indent:0px;
+    text-decoration:none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.navLink:hover{
+    border-bottom: 5px #fbba28 solid;
+    color: #fbba28;
+}
+#main{
+    margin-top: 92px;
+}
+/*-----FIM INDEX PAGE-----*/
+
+/*-----LOGIN PAGE-----*/
+.conteudo{
+    margin-top: -70px; /*92px (por defeito) - 62px = 30px*/
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: auto;
+}
+
+#userArea{
+    margin-top: 10%;
+    margin-right: 10%;
+}
+
+.imgLogo{
+    max-width: 70%;
+    margin-bottom: 10px;
+}
+
+.campo{
+    margin: 5px 0 5px 0;
+}
+
+#criarConta{
+    color: blue;
+    font-size: 11pt;
+    margin-left: 8px;
+}
+
+.imgTWF{
+    max-width: 40%;
+}
+
+#error{
+    color: red;
+}
+/*-----FIM LOGIN PAGE-----*/
+
+
+/*-----CONFIGURAÇÕES COMUNS-----*/
+.pageNome{
+    font-family: 'Compacta';
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fdc400;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+.nonDecor{
+    text-decoration: none;
+    color: black;
+}

@@ -1,6 +1,10 @@
 function showHidePesquisa(){
     let block = document.getElementsByClassName('blocoDePesquisa')[0];
-    if(block.style.display == 'block') block.style.display = 'none';
+    if(block.style.display == 'block'){
+        block.style.display = 'none';
+        document.getElementsByClassName("linhaDePesquisa")[0].value = "";
+        filtrar();
+    } 
     else block.style.display = 'block';
 }
 
@@ -23,4 +27,18 @@ function filtrar() {
         else tr[i].style.display = "none";
     }
               
+}
+
+function ordShow(ref){
+    form = document.getElementById(ref+"_f");
+    buttn = document.getElementById(ref+"_b");
+
+    if(form.style.display == 'block'){
+        form.style.display = 'none';
+        buttn.style.display = 'block';       
+    } 
+    else {
+        form.style.display = 'block';
+        buttn.style.display = 'none';
+    }
 }
