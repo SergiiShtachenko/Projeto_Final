@@ -21,8 +21,8 @@
             <nav class="topNav" id="topNavAD" role="navigation">            
                 <ul class="navConteiner">
                     <li class="navEl"><a class="navLink" href="#clients">Utilizadores</a></li>
-                    <li class="navEl"><a class="navLink" href="#product">Clientes</a></li>
-                    <li class="navEl"><a class="navLink" href="#price">Produtos</a></li>
+                    <li class="navEl"><a class="navLink" href="cl_produto_list.php">Clientes</a></li>
+                    <li class="navEl"><a class="navLink" href="ad_produto_list.php">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#alloredes">Encomendas</a></li>
                 </ul>                
             </nav>

@@ -3,7 +3,7 @@
     function getAllProdutos(){
         global $dblink;
 
-        $stmt = $dblink->prepare('SELECT * FROM produto');
+        $stmt = $dblink->prepare('SELECT * FROM produto ORDER BY reference');
         $stmt->execute();
 
         //return $stmt->fetchAll();

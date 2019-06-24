@@ -20,7 +20,7 @@
             <!-- Navigação -->
             <nav class="topNav" id="topNavCL" role="navigation">            
                 <ul class="navConteiner">
-                    <li class="navEl"><a class="navLink" href="#order">Produtos</a></li>
+                    <li class="navEl"><a class="navLink" href="ad_produto_list.php">Produtos</a></li>
                     <li class="navEl"><a class="navLink" href="#pending">Encomendas</a></li>
                     <li class="navEl"><a class="navLink" href="#editDates">Alterar dados</a></li>
                 </ul>

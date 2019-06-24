@@ -28,27 +28,26 @@
             <article class="pageNome">CRIAR ARTIGO</article>
             <article id="alterPr">
                 <table>
-                    <tr>
-                        <td>
-                            <form name="alterProduto" action="" method="POST">
-                                    <p>
-                                        <input type="text" name="refPr" placeholder="Reference do artigo *" required="preenchimento obrigatório">
-                                        <input type="text" name="nomePr" placeholder="Nome do artigo *" required="preenchimento obrigatório" maxlength="15">
-                                        <input type="number" name="pricePr" step="0.01" min="0" placeholder="Preço do artigo *" required="preenchimento obrigatório" maxlength="15">
-                                    </p>
-                                    <p>
-                                        <input type="text" name="descPr" placeholder="Descritivo do artigo *" required="preenchimento obrigatório">
-                                        <label class="uploadFile">
-                                            <input type="file" name="fotoPr" onchange="showFile()"/>
-                                            Foto do Artigo
-                                        </label>
-                                    </p>
-                                    <p><input type="submit" value="Enviar" onclick="return validarPass()"></p>
-                                </form>
+                    <tr class="orSizeTab">
+                        <td colspan="7">
+                            <form class="orSizeForm" id="ordPr1" action="">
+                                <input class="orSize" name="T35" placeholder="35"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T36" placeholder="36"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T37" placeholder="37"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T38" placeholder="38"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T39" placeholder="39"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T40" placeholder="40"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T41" placeholder="41"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T42" placeholder="42"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T43" placeholder="43"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T44" placeholder="44"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T45" placeholder="45"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T46" placeholder="46"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T47" placeholder="47"size=3 onchange="calcTotal()">
+                                <input class="orSize" name="T48" placeholder="48"size=3 onchange="calcTotal()">
+                                <button class="showSizes" type="button" onclick="ordHide('ordPr1')">^</button>
+                            </form>
                         </td>
-                        <td>
-                            <img class="swowFoto" src="images/produtos/No_image.png" height="150"  alt="Image preview...">
-                        </td>                
                     </tr>
                 </table>
             </article>

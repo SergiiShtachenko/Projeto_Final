@@ -6,7 +6,7 @@
     $listaVer = getAllProdutos();
 
     include ('templates/cl_header.php');
-    include ('templates/cl_produtoList.php');
+    include ('templates/cl_produto_list.php');
     include ('templates/footer.php');
     
 ?>
