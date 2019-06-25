@@ -1,7 +1,7 @@
 <?php 
     //include ('config/init_p.php');
     //include ('models/utilizador.php');
-    include ('templates/cl_header.php');
+    include ('templates/header_ad.php');
     include ('database/clientList.php');
 
     $listaClientsVer = getAllClients();
