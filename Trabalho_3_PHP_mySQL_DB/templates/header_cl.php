@@ -15,15 +15,15 @@
     <body>
         <header>
             <section id="yellowLine">
-                Olá <span id="userName">nome</span><a href="#">Sair</a>
+                Olá <span id="userName"><?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?></span><a href="Logout.php">Sair</a>
             </section>
             <a href="https://www.toworkfor.pt"><img id="twfLogoMini" src="images/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
             <!-- Navigação -->
             <nav class="topNav" id="topNavCL" role="navigation">            
                 <ul class="navConteiner">
                     <li class="navEl"><a class="navLink" href="produto_list_ad.php">Produtos</a></li>
-                    <li class="navEl"><a class="navLink" href="#pending">Encomendas</a></li>
-                    <li class="navEl"><a class="navLink" href="#editDates">Alterar dados</a></li>
+                    <li class="navEl"><a class="navLink" href="">Encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="">Alterar dados</a></li>
                 </ul>
             </nav>
         </header>

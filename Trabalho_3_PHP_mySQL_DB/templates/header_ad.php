@@ -14,16 +14,16 @@
     <body>
         <header>
             <section id="yellowLine">
-                Olá <span id="userName">nome</span><a href="#">Sair</a>
+                Olá <span id="userName"><?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?></span><a href="Logout.php">Sair</a>
             </section>
             <a href="https://www.toworkfor.pt"><img id="twfLogoMini" src="images/ToWorkFor - Logo.jpg" alt="ToWorkFor"></a>
             <!-- Navigação -->
             <nav class="topNav" id="topNavAD" role="navigation">            
                 <ul class="navConteiner">
-                    <li class="navEl"><a class="navLink" href="#clients">Utilizadores</a></li>
-                    <li class="navEl"><a class="navLink" href="produto_list_cl.php">Clientes</a></li>
+                    <li class="navEl"><a class="navLink" href="listaUsersVer.php">Utilizadores</a></li>
+                    <li class="navEl"><a class="navLink" href="listaUsersVer.php">Clientes</a></li>
                     <li class="navEl"><a class="navLink" href="produto_list_ad.php">Produtos</a></li>
-                    <li class="navEl"><a class="navLink" href="#alloredes">Encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="">Encomendas</a></li>
                 </ul>                
             </nav>
 

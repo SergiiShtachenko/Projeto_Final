@@ -15,7 +15,7 @@
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <article class="totaisEnc">
         
-        <h3>Total Qtd: <span><?php if(isset( $_GET['qtd'])) echo $_GET['qtd']; ?> pr</span>  | Total Valor: <span><span><?php if(isset( $_GET['val'] )) echo $_GET['val']; ?> €</span></h3>
+        <h3>Total Qtd: <span><?php if(isset( $_GET['qtd'])) echo $_GET['qtd']; else echo '0'; ?></span>  | Total Valor: <span><span><?php if(isset( $_GET['val'] )) echo $_GET['val']; else echo '0.00'; ?> €</span></h3>
         <h3></h3>
         <form action="produto_edit.php" method="POST">                                            
                 <input type="submit" value="Confiramr ENCOMENDA">

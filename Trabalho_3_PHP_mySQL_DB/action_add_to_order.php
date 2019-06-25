@@ -5,12 +5,12 @@
     
     $orederItem = new PrdTamanho($_POST['guidPr'], $_POST['pricePr'], $_POST['T35'], $_POST['T36'], $_POST['T37'], $_POST['T38'], $_POST['T39'], $_POST['T40'], $_POST['T41'], $_POST['T42'], $_POST['T43'], $_POST['T44'], $_POST['T45'], $_POST['T46'], $_POST['T47'], $_POST['T48']);
 
-    $carinho[] = $orederItem;
+    if($orederItem->getTotalQtd() > 0) $_SESSION['carinho'][] = $orederItem;
     
     $totalQtd = 0;
     $totalVal = 0;
 
-    foreach($carinho as $compra){
+    foreach($_SESSION['carinho'] as $compra){
         $totalQtd = $compra->getTotalQtd();
         $totalVal = $compra->getTotalVal();
     }

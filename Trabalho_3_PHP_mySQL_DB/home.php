@@ -6,7 +6,7 @@
     include ('models/utilizador.php');
 ?>
 <!DOCTYPE html>
-<html ng-app="angularApp"> <!-- definir angular app -->
+<html> 
     <head>
         <meta charset="utf-8"/>
         <title>AMF - Plataforma on-line</title>
