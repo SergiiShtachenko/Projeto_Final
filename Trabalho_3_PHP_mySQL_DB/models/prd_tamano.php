@@ -58,12 +58,12 @@
         public function getTotalQtd(){
             $total = 0;
             foreach($this->_lstTamanhos as $tamanho){
-                $_lstTamanhos += $tamanho;
+                if($tamanho != null) $total += $tamanho;
             }
-            return $tamanho;
+            return $total;
         }
 
-        public function getTotalVal(){ return $this->_price * getTotalQtd(); }
+        public function getTotalVal(){ return $this->_price * $this->getTotalQtd(); }
 
     }    
 ?>

@@ -55,6 +55,8 @@ $fff = $ppp->getDescr();
 echo $fff . '<br>';
 echo $ppp->getGuid() . '<br>';
 
+$lista;
+
 $lista[] = new Produto(null, '8A01', 'Chanki', 'sapato', 'foto', true);
 
 $lista[] = new Produto(null, '8A01', 'Kuki', 'sapato', 'foto', true);

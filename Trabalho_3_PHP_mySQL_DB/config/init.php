@@ -1,7 +1,7 @@
 <?php
-  session_start(); // iniciar secsão
+  session_start(); // iniciar secsão 
 
-  global $carinho[]; // carinho de compras
+  global $carinho; // carinho de compras
 
   $dblink = new PDO('pgsql:host=localhost;port=5432;dbname=dbo_onlinePlatformAMF','postgres', 'dostup85');
   //$dblink = new PDO('pgsql:host=localhost;port=5432;dbname=dbo_onlinePlatformAMF','userAMF', '');

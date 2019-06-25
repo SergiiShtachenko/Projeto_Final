@@ -14,7 +14,8 @@
     
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     <article class="totaisEnc">
-        <h3>Total Qtd: <span><?php $_GET['totalQtd'] ?> pr</span>  | Total Valor: <span><span><?php $_GET['totalVal'] ?> pr</span></h3>
+        
+        <h3>Total Qtd: <span><?php if(isset( $_GET['qtd'])) echo $_GET['qtd']; ?> pr</span>  | Total Valor: <span><span><?php if(isset( $_GET['val'] )) echo $_GET['val']; ?> €</span></h3>
         <h3></h3>
         <form action="produto_edit.php" method="POST">                                            
                 <input type="submit" value="Confiramr ENCOMENDA">
@@ -49,6 +50,7 @@
                     <td colspan="5">
                         <form class="tmnForm" id="<?php echo $item->getRef(); ?>_f" action="action_add_to_order.php" method="POST">
                             <input type="hidden" name="guidPr" value="<?php echo $item->getGuid(); ?>">
+                            <input type="hidden" name="pricePr" value="<?php echo $item->getPrice(); ?>">
                             <input class="orSize" name="T35" placeholder="35"size=3>
                             <input class="orSize" name="T36" placeholder="36"size=3>
                             <input class="orSize" name="T37" placeholder="37"size=3>
