@@ -1,5 +1,6 @@
 <?php
     //database
+    
     function getAllProdutos(){
         global $dblink;
 
@@ -7,9 +8,19 @@
         $stmt->execute();
 
         //return $stmt->fetchAll();
-        
+        //$listaPr;
+
         while($row = $stmt->fetch()){
-            $listaPr[] = new Produto($row['guid'], $row['reference'], $row['nome'], $row['descricao'], $row['foto'], $row['price'], $row['ativo']);
+            $p = new Produto();
+            $p->setGuid($row['guid']);
+            $p->setRef($row['reference']);
+            $p->setNome($row['nome']);
+            $p->setDescr($row['descricao']);
+            $p->setFoto($row['foto']);
+            $p->setPrice($row['price']);
+            $p->setAtivo($row['ativo']);
+
+            $listaPr[] = $p;
         }
         return $listaPr;
     }
@@ -21,10 +32,17 @@
             $stmt->execute(array($guid));
             //return $stmt->fetchAll();        
             while($row = $stmt->fetch()){
-                $produto = new Produto($row['guid'], $row['reference'], $row['nome'], $row['descricao'], $row['foto'], $row['price'], $row['ativo']);
+                $produto = new Produto();
+                $produto->setGuid($row['guid']);
+                $produto->setRef($row['reference']);
+                $produto->setNome($row['nome']);
+                $produto->setDescr($row['descricao']);
+                $produto->setFoto($row['foto']);
+                $produto->setPrice($row['price']);
+                $produto->setAtivo($row['ativo']);;
             }
         }
-        else $produto = new Produto("", "", "", "", "no_image", "", true);        
+        else $produto = new Produto();        
 
 
         return $produto;

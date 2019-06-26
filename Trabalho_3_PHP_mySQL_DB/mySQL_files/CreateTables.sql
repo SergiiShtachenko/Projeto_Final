@@ -60,11 +60,19 @@ Create table enc_prod(
 	tamanho INTEGER,
 	qtd INTEGER NOT NULL,
 	price DECIMAL NOT NULL DEFAULT 0.0 CHECK (price >= 0),
-	reference VARCHAR,
-	nome VARCHAR,
-	descricao VARCHAR,
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	regdate TIMESTAMP DEFAULT (NOW()),
 	PRIMARY KEY(encomenda, produto, tamanho)
 );
---drop table enc_prod
+
+Create table carrinha(
+	guid VARCHAR PRIMARY KEY DEFAULT uuid_generate_v4(),
+	username VARCHAR NOT NULL REFERENCES utilizador(guid),
+	produto VARCHAR REFERENCES produto(guid),
+	tamanho INTEGER,
+	qtd INTEGER NOT NULL,
+	price DECIMAL NOT NULL DEFAULT 0.0 CHECK (price >= 0),
+	ativo BOOLEAN NOT NULL DEFAULT TRUE,
+	regdate TIMESTAMP DEFAULT (NOW())
+);
+--drop table carrinha

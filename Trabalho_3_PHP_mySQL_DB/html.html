@@ -5,6 +5,7 @@
         <title>AMF - Plataforma on-line</title>      
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/produto.css">
+        <link rel="stylesheet" href="css/encomenda.css">
         <script src="js/header.js" defer></script>
         <script src="js/prodList.js" defer></script>   
     </head>    
@@ -23,27 +24,59 @@
                 </ul>
             </nav>
         </header>
-        <section class = "lstProdutos">
-    
-                <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
-                <table class="orProductList">  
-
-        <article class="totaisEnc">
-            <h3>Total Qtd: <span>100 pr</span>  | Total Valor: <span>100 pr</span></h3>
-            <h3></h3>
-            <form action="produto_edit.php" method="POST">                                            
-                    <input type="submit" value="Confiramr ENCOMENDA">
-            </form> 
-        </article>
-
-        </section>
+        
+    <section class="lstEnc">
         <table>
-            <tr>
-                <td>
-                    
-                </td>
+            <tr class="head">
+                <th>Imagem</th>
+                <th width="80">Ref.</th>
+                <th width="100">Nome</th>
+                <th width="50">35</th>
+                <th width="50">36</th>
+                <th width="50">37</th>
+                <th width="50">38</th>
+                <th width="50">39</th>
+                <th width="50">40</th>
+                <th width="50">41</th>
+                <th width="50">42</th>
+                <th width="50">43</th>
+                <th width="50">44</th>
+                <th width="50">45</th>
+                <th width="50">46</th>
+                <th width="50">47</th>
+                <th width="50">48</th>
+            </tr>
+            <tr class="orProd"></tr>
+                    <td><img class="showProd" src="images/produtos/8A3010.jpg"></td>
+                    <td >                
+                        <h5>8A00.00</h5>
+                    </td> 
+                    <td>                
+                        <h5>Nomeeee ee</h5>
+                    </td>
+                    <form action="action_produto_del.php" method="POST"></form>
+                        <input type="hidden" name="guidCr" value="<?php echo $item->getGuid();?>">
+                        <input type="hidden" name="guidPr" value="<?php echo $item->getGuid();?>">
+                        <td><input class="orSize" name="T35" size=3></td>
+                        <td><input class="orSize" name="T36" size=3></td>
+                        <td><input class="orSize" name="T37" size=3></td>
+                        <td><input class="orSize" name="T38" size=3></td>
+                        <td><input class="orSize" name="T39" size=3></td>
+                        <td><input class="orSize" name="T40" size=3></td>
+                        <td><input class="orSize" name="T41" size=3></td>
+                        <td><input class="orSize" name="T42" size=3></td>
+                        <td><input class="orSize" name="T43" size=3></td>
+                        <td><input class="orSize" name="T44" size=3></td>
+                        <td><input class="orSize" name="T45" size=3></td>
+                        <td><input class="orSize" name="T46" size=3></td>
+                        <td><input class="orSize" name="T47" size=3></td>
+                        <td><input class="orSize" name="T48" size=3></td>
+                        <th> <input type="submit" value="Editar"></th>
+                    </form>
+                
             </tr>
         </table>
+    </section>
         
         <input type="file" maxlength="">
         <footer>

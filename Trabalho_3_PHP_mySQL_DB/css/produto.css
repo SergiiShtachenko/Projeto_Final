@@ -2,6 +2,9 @@
 .lstProdutos{
     margin: 100px 10% 0 10%;
 }
+.lstProdutosCl{
+    margin: -30px 10% 0 10%;
+}
 .headePage{
     width: 100%;
 }
@@ -120,11 +123,17 @@
 }
 /*--------Encomendar--------*/
 .totaisEnc{
-    position: fixed;
-    top: 25px;
-    right: 80px;
-    text-align: right   ;
+    position: sticky;
+    padding: 0 15px;
+    top: 85px;
+    width: 15%;
+    height: 165px;
+    margin-left: 84%;
+    text-align: left;
     z-index: 150;
+    background: #0a140c;
+    -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
 }
 .totaisEnc h3{
     color: white;
@@ -150,6 +159,7 @@
     font-size: 12pt;
     font-weight: bold;
     color: black;
+    margin-bottom: 10px;
 }
 
 .tmnForm{

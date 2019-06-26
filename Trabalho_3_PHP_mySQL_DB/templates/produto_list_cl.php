@@ -10,17 +10,20 @@
     
 </section>
 
-<section class = "lstProdutos">
+<aside class="totaisEnc">        
+    <h3><span>Carrinho de compra:</span></h3>
+    <h3>Total Qtd: <span><?php echo $noCarrinho['qtd']; ?></span></h3>
+    <h3>Total Valor: <span><span><?php echo $noCarrinho['val']; ?> €</span></h3>
+    <h3></h3>
+    <form action="encomedna_edit.php" method="POST">                                            
+            <input type="submit" value="Finalizar">
+    </form> 
+</aside>
+
+<section class = "lstProdutosCl">
     
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
-    <article class="totaisEnc">
-        
-        <h3>Total Qtd: <span><?php if(isset( $_GET['qtd'])) echo $_GET['qtd']; else echo '0'; ?></span>  | Total Valor: <span><span><?php if(isset( $_GET['val'] )) echo $_GET['val']; else echo '0.00'; ?> €</span></h3>
-        <h3></h3>
-        <form action="produto_edit.php" method="POST">                                            
-                <input type="submit" value="Confiramr ENCOMENDA">
-        </form> 
-    </article>
+    
     <table class="orProductList">   
 
 <?php
@@ -49,8 +52,11 @@
                 <tr class="tamanhos" >
                     <td colspan="5">
                         <form class="tmnForm" id="<?php echo $item->getRef(); ?>_f" action="action_add_to_order.php" method="POST">
-                            <input type="hidden" name="guidPr" value="<?php echo $item->getGuid(); ?>">
-                            <input type="hidden" name="pricePr" value="<?php echo $item->getPrice(); ?>">
+                            <input type="hidden" name="guid" value="<?php echo $item->getGuid(); ?>">
+                            <input type="hidden" name="ref" value="<?php echo $item->getRef(); ?>">
+                            <input type="hidden" name="nome" value="<?php echo $item->getNome(); ?>">
+                            <input type="hidden" name="foto" value="<?php echo $item->getFoto(); ?>">
+                            <input type="hidden" name="price" value="<?php echo $item->getPrice(); ?>">
                             <input class="orSize" name="T35" placeholder="35"size=3>
                             <input class="orSize" name="T36" placeholder="36"size=3>
                             <input class="orSize" name="T37" placeholder="37"size=3>
