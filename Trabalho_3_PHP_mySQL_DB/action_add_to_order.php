@@ -6,13 +6,21 @@
 
     if (!isset($_SESSION['username'])) die;
     global $guidEnc;
+    $route;
         
     $itemPedido = new PrdTamanho();
+    $itemPedido->setGuidEnc(gerarGuid());
+    if($_POST['guidLn'] != "") { // modo de criação da encomenda
+        delByGuid($_POST['guidLn']);
+        $route = "Location: produto_list_cl.php";
+    }
+    else $route = "Location: encomedna_edit.php";    
+    
 
-    $itemPedido->setGuid($_POST['guid']);
-    $itemPedido->setRef($_POST['ref']);
-    $itemPedido->setNome($_POST['nome']);
-    $itemPedido->setFoto($_POST['foto']);
+    $itemPedido->setGuid($_POST['guidPr']);
+    // $itemPedido->setRef($_POST['ref']);
+    // $itemPedido->setNome($_POST['nome']);
+    // $itemPedido->setFoto($_POST['foto']);
     $itemPedido->setPrice($_POST['price']);
 
     if($_POST['T35'] > 0) $itemPedido->addToLstProd('35', $_POST['T35']);
@@ -42,6 +50,6 @@
     // echo 'qtd: '.$totalQtd.' Val: '.$totalVal;
 
     //header ('Location: produto_list_cl.php?qtd='.$totalQtd.'&val='.$totalVal);
-    header ('Location: produto_list_cl.php');
+    header ($route );
     //produto_list_cl.php?qtd=10&val=200)
 ?>

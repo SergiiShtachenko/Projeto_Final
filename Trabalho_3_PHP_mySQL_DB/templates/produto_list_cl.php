@@ -49,13 +49,11 @@
                             <button type="button" id="<?php echo $item->getRef(); ?>_b" onclick="ordShow('<?php echo $item->getRef(); ?>')">Encomendar</button>
                         </td>                    
                 </tr>
-                <tr class="tamanhos" >
+                <tr class="tamanhos">
                     <td colspan="5">
                         <form class="tmnForm" id="<?php echo $item->getRef(); ?>_f" action="action_add_to_order.php" method="POST">
-                            <input type="hidden" name="guid" value="<?php echo $item->getGuid(); ?>">
-                            <input type="hidden" name="ref" value="<?php echo $item->getRef(); ?>">
-                            <input type="hidden" name="nome" value="<?php echo $item->getNome(); ?>">
-                            <input type="hidden" name="foto" value="<?php echo $item->getFoto(); ?>">
+                            <input type="hidden" name="guidPr" value="<?php echo $item->getGuid(); ?>">
+                            <input type="hidden" name="guidLn" value="">
                             <input type="hidden" name="price" value="<?php echo $item->getPrice(); ?>">
                             <input class="orSize" name="T35" placeholder="35"size=3>
                             <input class="orSize" name="T36" placeholder="36"size=3>

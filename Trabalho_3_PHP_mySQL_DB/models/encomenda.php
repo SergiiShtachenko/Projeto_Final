@@ -14,7 +14,6 @@ class Encomenda {
         $this->_guid = $this->gerarGuid();
         $this->_dataEncomenda = date('d-m-y');
     }
-
     
     public function getGuid(){ return $this->_guid; }
     public function setGuid($guid){ $this->_guid = $guid; }

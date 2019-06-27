@@ -68,3 +68,38 @@ input[type=submit]{
     line-height: 22pt;
     text-align: center;
 }
+
+.fimEnc input[name=nrEnc]{
+    width: 180px;
+    padding: 10px;
+    margin-left: 10px;
+    color: black;
+    line-height: 17pt;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+}
+.fimEnc input[name=data]{
+    width: 180px;
+    padding: 10px;
+    margin-left: 10px;
+    color: black;
+    margin-right: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background-color: #fbba28;
+}
+.fimEnc input[type=submit]{
+    background-color: #fbba28;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 28pt;
+    border-color: #fbba28;
+    font-family:Roboto,sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: black;;
+}
