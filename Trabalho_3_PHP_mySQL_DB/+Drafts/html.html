@@ -25,7 +25,7 @@
             </nav>
         </header>
         
-    <section class="lstEnc">
+    <section style="margin-top: 60px;" class="lstEnc">
         <table>
             <tr class="head">
                 <th>Imagem</th>
@@ -57,7 +57,7 @@
                     <form action="action_produto_del.php" method="POST"></form>
                         <input type="hidden" name="guidCr" value="<?php echo $item->getGuid();?>">
                         <input type="hidden" name="guidPr" value="<?php echo $item->getGuid();?>">
-                        <td><input class="orSize" name="T35" size=3></td>
+                        <td><input type="number" step="1" min="0" class="orSize" name="T35" size=3></td>
                         <td><input class="orSize" name="T36" size=3></td>
                         <td><input class="orSize" name="T37" size=3></td>
                         <td><input class="orSize" name="T38" size=3></td>

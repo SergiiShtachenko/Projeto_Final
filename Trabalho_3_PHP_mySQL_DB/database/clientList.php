@@ -1,9 +1,9 @@
 <?php
     //database
     function getAllClients(){
-        include ('../config/init_p.php');
-        include ('../models/cliente.php');
-
+        //include ('../config/init_p.php');
+        //include ('../models/cliente.php');
+        global $dblink;
         $stmt = $dblink->prepare('SELECT * FROM cliente');
         $stmt->execute();
 

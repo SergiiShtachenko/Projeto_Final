@@ -1,9 +1,9 @@
 <?php
     //database
     function getAllUtilizador(){
-        include ('../config/init_p.php');
-        include ('../models/utilizador.php');
-
+        //include ('../config/init_p.php');
+        //include ('../models/utilizador.php');
+        global $dblink;
         $stmt = $dblink->prepare('SELECT * FROM utilizador');
         $stmt->execute();
 

@@ -1,8 +1,16 @@
+<style>
+   
+    <?php echo file_get_contents("css/header.css"); ?>
+    
+    <?php echo file_get_contents("css/clients.css"); ?>
+</style>
+
+
 <link rel="stylesheet" href="css/clients.css">
 <link rel="stylesheet" href="css/header.css">
-    <script src="js/clients.js"></script>
+    
 <!-------fim header------->
-<?php  include ('listaClientsVer.php'); ?>
+<?php  //include ('listaClientsVer.php'); ?>
 <!-------lista_utilizadores.php------->
 <section>
 <br>
@@ -19,7 +27,7 @@
   </tr>
 <?php
    
-    foreach($listaClientsVer as $item){
+    foreach($listaUserVer as $item){
         //if($item->getAtivo()){
 ?>
 
@@ -34,6 +42,7 @@
         </tr>
     </table>
 </section>
+<script src="js/clients.js"></script>
 <?php
        // }
     }

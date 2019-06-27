@@ -1,3 +1,9 @@
+<style>
+    <?php echo file_get_contents("css/produto.css"); ?>
+    <?php echo file_get_contents("css/header.css"); ?>
+    <?php echo file_get_contents("css/encomenda.css"); ?>
+</style>
+
 <section class="alterProduto">
     <article class="pageNome">        
         <?php 
@@ -24,11 +30,14 @@
                                     Foto do Artigo
                                 </label>
                             </p>
-                            <p><input type="submit" value="Enviar" onclick="return validarPass()"></p>
+                            <p>
+                                <input type="submit" value="Enviar" onclick="return validarPass()">    
+                                <a style="margin-left: 10px;" href="produto_list_ad.php"><img id="fecharImg" src="images/fechar.png" alt="fchar"></a>
+                            </p>
                         </form>
                 </td>
                 <td>
-                    <img class="swowFoto" src="images/produtos/<?php echo $prod->getFoto() . '.jpg'; ?>" height="150"  alt="Image preview...">
+                    <img class="swowFoto" src="images/produtos/<?php if ($prod->getFoto() != "") echo $prod->getFoto() . '.jpg'; else  echo 'no_image.jpg'; ?>" height="150"  alt="Image preview...">
                 </td>                
             </tr>
         </table>

@@ -1,15 +1,21 @@
 
-
-
+<style>
+    <?php echo file_get_contents("css/header.css"); ?>
+    <?php echo file_get_contents("css/clients.css"); ?>
+    <?php echo file_get_contents("css/editarDados.css"); ?>
+</style>
+<script defer>
+    <?php echo file_get_contents("js/clients.js"); ?>
+</script>
 
 <link rel="stylesheet" href="../css/clients.css">
 <link rel="stylesheet" href="../css/header.css">
 
     
 <!-------fim header------->
-<?php  include ('../listaUsersVer.php'); ?>
+<?php  //include ('../listaUsersVer.php'); ?>
 <!-------lista_utilizadores.php------->
-<section>
+<section style="margin-top: 60px;">
    <br>
    <br> 
   <h1>Utilizadores</h1>

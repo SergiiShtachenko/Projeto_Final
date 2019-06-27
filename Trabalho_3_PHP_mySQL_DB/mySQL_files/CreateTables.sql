@@ -52,19 +52,6 @@ Create Table encomenda(
 );
 --drop table encomenda
 
-Create table carrinha(
-	guid VARCHAR PRIMARY KEY DEFAULT uuid_generate_v4(),
-	username VARCHAR NOT NULL REFERENCES utilizador(guid),
-	produto VARCHAR REFERENCES produto(guid),
-	tamanho VARCHAR,
-	qtd INTEGER NOT NULL,
-	price DECIMAL NOT NULL DEFAULT 0.0 CHECK (price >= 0),
-	ativo BOOLEAN NOT NULL DEFAULT TRUE,
-	regdate TIMESTAMP DEFAULT (NOW())
-);
---drop table carrinha
-
-
 Create table tamanho(
 	guid VARCHAR PRIMARY KEY DEFAULT uuid_generate_v4(),	
 	t35 INTEGER,
@@ -86,15 +73,29 @@ Create table tamanho(
 );
 --drop tamanho carrinha
 
+
 --RELACIONAMENTO MUITOS PARA MUITOS
+
+Create table carrinha(
+	guid VARCHAR PRIMARY KEY DEFAULT uuid_generate_v4(),
+	username VARCHAR NOT NULL REFERENCES utilizador(guid),
+	produto VARCHAR REFERENCES produto(guid),
+	tamanho VARCHAR REFERENCES tamanho (guid),
+	qtd INTEGER NOT NULL,
+	price DECIMAL NOT NULL DEFAULT 0.0 CHECK (price >= 0),
+	ativo BOOLEAN NOT NULL DEFAULT TRUE,
+	regdate TIMESTAMP DEFAULT (NOW())
+);
+--drop table carrinha
 
 Create table enc_prod(
 	encomenda VARCHAR REFERENCES encomenda(guid),
 	produto VARCHAR REFERENCES produto(guid),
-	tamanho INTEGER,
+	tamanho VARCHAR REFERENCES tamanho (guid),
 	qtd INTEGER NOT NULL,
 	price DECIMAL NOT NULL DEFAULT 0.0 CHECK (price >= 0),
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	regdate TIMESTAMP DEFAULT (NOW()),
 	PRIMARY KEY(encomenda, produto, tamanho)
 );
+--drop table enc_prod

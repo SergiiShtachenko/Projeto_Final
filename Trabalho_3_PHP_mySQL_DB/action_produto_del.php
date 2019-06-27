@@ -4,7 +4,7 @@
     include ('models/produto.php');
     include ('database/produto.php');
 
-    (!isset($_SESSION['username'])) die;
+    //(!isset($_SESSION['username'])) die;
 
     
     $confirm = deleteProduto($_POST['guidPr']);

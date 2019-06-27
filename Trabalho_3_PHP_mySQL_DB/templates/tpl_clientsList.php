@@ -1,12 +1,21 @@
+
+<style> 
+    <?php echo file_get_contents("css/clients.css"); ?>
+    <?php echo file_get_contents("css/header.css"); ?>
+</style>
+<script defer>
+    <?php echo file_get_contents("js/clients.js"); ?>
+</script>
+
 <link rel="stylesheet" href="../css/clients.css">
 <link rel="stylesheet" href="../css/header.css">
     <script src="../js/clients.js"></script>
 <!-------fim header------->
-<?php  include ('../listaClientsVer.php'); ?>
+<?php  //include ('../listaClientsVer.php'); ?>
 <!-------lista_utilizadores.php------->
-<section>
+<section >
 <br>
-   <br> 
+   <br> <br> <br> <br> 
   <h1>Clientes</h1>
   <table id="clients">
   <tr>

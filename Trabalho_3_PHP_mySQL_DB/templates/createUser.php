@@ -1,4 +1,7 @@
-   
+<style> 
+    <?php echo file_get_contents("css/clients.css"); ?>
+    <?php echo file_get_contents("css/registo.css"); ?>
+</style>   
 
         <link rel="stylesheet" href="../css/registo.css">
         <script src="js/registo.js" defer></script>

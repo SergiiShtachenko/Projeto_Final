@@ -63,8 +63,12 @@ input[type=submit]{
     background: #fbba28;
     line-height: 22pt;
 }
+.orProd input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 .orSize{
     border: none;
+    width: 45px;
     line-height: 22pt;
     text-align: center;
     font-family:Roboto,sans-serif;

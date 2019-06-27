@@ -1,13 +1,12 @@
 <?php 
-    include ('config/init_p.php');
-    include ('models/utilizador.php');
-    include ('templates/header_ad.php');
+    include ('config/init.php');
+    include ('models/cliente.php');   
     include ('database/clientList.php');
 
     $listaClientsVer = getAllClients();
 
-    
-    //include ('templates/cl_produtoList.php');
+    include ('templates/header_ad.php');
+    include ('templates/tpl_clientsList.php');
     include ('templates/footer.php');
     
 ?>

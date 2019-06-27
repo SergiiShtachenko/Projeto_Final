@@ -9,5 +9,5 @@
     include ('templates/produto_edit.php');
     include ('templates/footer.php');        
     
-    echo $_POST['guidPr'] . ' ou nada';
+    //cho $_POST['guidPr'] . ' ou nada';
 ?>

@@ -6,17 +6,18 @@
 
     //echo $_POST['descPr'] . ' ou nada';
 
-    (!isset($_SESSION['username'])) die;
+    //(!isset($_SESSION['username'])) die;
 
-    $prod = new Produto(
-        $_POST['guidPr'],
-        $_POST['refPr'],
-        $_POST['nomePr'],
-        $_POST['descPr'],
-        $_POST['refPr'],
-        $_POST['pricePr'],
-        true
-    );     
+    $prod = new Produto();
+    $prod->setGuid($_POST['guidPr']);
+    $prod->setRef($_POST['refPr']);
+    $prod->setNome($_POST['nomePr']);
+    $prod->setDescr($_POST['descPr']);
+    $prod->setFoto($_POST['refPr']);
+    $prod->setPrice($_POST['pricePr']);
+    $prod->setAtivo(true);
+        
+
 
     $confirm = updateProduto($prod);
 
