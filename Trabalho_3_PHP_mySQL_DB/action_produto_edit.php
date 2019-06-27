@@ -6,7 +6,7 @@
 
     //echo $_POST['descPr'] . ' ou nada';
 
-    //(!isset($_SESSION['username'])) die;
+    if (!isset($_SESSION['userID'])) die;
 
     $prod = new Produto();
     $prod->setGuid($_POST['guidPr']);

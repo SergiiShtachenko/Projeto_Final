@@ -4,11 +4,14 @@
     include ('models/prd_tamano.php');
     include ('database/prod_tamanho.php');
 
-    if (!isset($_SESSION['username'])) die;
+    if (!isset($_SESSION['userID'])) die;
+    
     global $guidEnc;
     $route;
         
     $itemPedido = new PrdTamanho();
+
+    //echo $_POST['guidLn'] ;
     
     if($_POST['guidLn'] == "") { // modo de criação da encomenda
         $itemPedido->setAutoGuidEnc();        
@@ -47,7 +50,9 @@
     if($_POST['T48'] > 0) $itemPedido->addToLstProd('48', $_POST['T48']);
 
     if($_POST['guidLn'] == "") updateCarinho($_SESSION['userID'], $itemPedido->getGuid(), $itemPedido->getGuidEnc(), $itemPedido->getTotalQtd(), $itemPedido->getPrice());
+    else updateCarinho($_SESSION['userID'], $itemPedido->getGuid(), $itemPedido->getGuidEnc(), $itemPedido->getTotalQtd(), $itemPedido->getPrice(), 1);
 
+    
     //echo $itemPedido->getGuidEnc().'<br>';
 
     foreach($itemPedido->getLstTamanhos() as $size => $qtd){

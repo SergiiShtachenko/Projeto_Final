@@ -1,9 +1,9 @@
 <?php
     
-    function updateCarinho($user, $prod, $guidTtamanho, $qtd, $price, $guid = ""){
+    function updateCarinho($user, $prod, $guidTtamanho, $qtd, $price, $modo = 0){
         global $dblink;
         
-        if($guid == ""){ // Mode de Criação        
+        if($modo == 0){ // Mode de Criação        
             //Criar tamanhos
             $stmt = $dblink->prepare('INSERT INTO tamanho(guid) VALUES(?)');
             $confirm = $stmt->execute(array($guidTtamanho));
@@ -14,8 +14,8 @@
             
         }
         else{ // Mode de edição não usado
-            $stmt = $dblink->prepare('UPDATE carrinha SET username = ?, produto = ?, tamanho = ?, qtd = ?, price = ? WHERE guid = ?');
-            $confirm = $stmt->execute(array($user, $prod, $guidTtamanho, $qtd, $price, $guid));
+            $stmt = $dblink->prepare('UPDATE carrinha SET username = ?, produto = ?, tamanho = ?, qtd = ?, price = ? WHERE tamanho = ?');
+            $confirm = $stmt->execute(array($user, $prod, $guidTtamanho, $qtd, $price, $guidTtamanho));
         }
         return $confirm;
     }

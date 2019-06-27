@@ -4,6 +4,8 @@
     include ('models/prd_tamano.php');
     include ('database/prod_tamanho.php');
 
+    if (!isset($_SESSION['userID'])) die;
+
     //echo $_POST['guidLn'];
     delLineByGuid($_POST['guidLn']);
 

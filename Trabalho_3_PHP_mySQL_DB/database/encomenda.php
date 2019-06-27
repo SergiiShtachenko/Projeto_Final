@@ -27,8 +27,7 @@
                 if($row[$select]>0) $p->addToLstProd($i, $row[$select]);
             }
             $enc->addToLstProd($p);
-        }
-        
+        }        
 
         return $enc;
     }
