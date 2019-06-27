@@ -1,5 +1,8 @@
 <?php
-    
+    // include ('../config/init.php');
+    // include ('produto.php');
+
+
     class PrdTamanho extends Produto{
         private $_guidEnc;
         private $_lstTamanhos = array();
@@ -16,7 +19,8 @@
             
         
         public function getGuidEnc(){ return $this->_guidEnc; }
-        public function setGuidEnc($_guidEnc){ $this->__guidEnc = $_guidEnc; }        
+        public function setGuidEnc($_guidEnc){ $this->__guidEnc = $_guidEnc; }
+        public function setAutoGuidEnc(){ $this->_guidEnc = $this->gerarGuid(); }
         
         public function getLstTamanhos(){ return $this->_lstTamanhos; }
         public function addToLstProd($tamanho, $qtd){ $this->_lstTamanhos[$tamanho] = $qtd; }
@@ -31,7 +35,63 @@
 
         public function getTotalVal(){ return $this->_price * $this->getTotalQtd(); }
 
+        private function gerarGuid() { // função da nete
+            $uuid = array(
+             'time_low'  => 0,
+             'time_mid'  => 0,
+             'time_hi'  => 0,
+             'clock_seq_hi' => 0,
+             'clock_seq_low' => 0,
+             'node'   => array()
+            );
+           
+            $uuid['time_low'] = mt_rand(0, 0xffff) + (mt_rand(0, 0xffff) << 16);
+            $uuid['time_mid'] = mt_rand(0, 0xffff);
+            $uuid['time_hi'] = (4 << 12) | (mt_rand(0, 0x1000));
+            $uuid['clock_seq_hi'] = (1 << 7) | (mt_rand(0, 128));
+            $uuid['clock_seq_low'] = mt_rand(0, 255);
+           
+            for ($i = 0; $i < 6; $i++) {
+             $uuid['node'][$i] = mt_rand(0, 255);
+            }
+           
+            $uuid = sprintf('%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x',
+             $uuid['time_low'],
+             $uuid['time_mid'],
+             $uuid['time_hi'],
+             $uuid['clock_seq_hi'],
+             $uuid['clock_seq_low'],
+             $uuid['node'][0],
+             $uuid['node'][1],
+             $uuid['node'][2],
+             $uuid['node'][3],
+             $uuid['node'][4],
+             $uuid['node'][5]
+            );
+           
+            return $uuid;
+        }
+
     }
+
+    // function updateTamanho($guidTtamanho, $size, $qtd){
+    //     global $dblink;
+        
+    //     $size = 't'.$size;
+    //     echo "$size, $qtd, $guidTtamanho <br>";
+
+    //     $stmt = $dblink->prepare("UPDATE tamanho SET $size = ? WHERE guid = ?");
+    //     $confirm = $stmt->execute(array($qtd, $guidTtamanho));
+        
+    //     return $confirm;
+    // }
+    // updateTamanho('3af6151b-b50a-453c-cfd5-504568f1ff2c', 37, 15);
+
+    // $tam = new PrdTamanho();
+    // $tam->setAutoGuidEnc();
+    // $tam->getGuidEnc();
+
+    // echo $tam->getGuidEnc();
 
 
     // $itemPedido = new PrdTamanho();

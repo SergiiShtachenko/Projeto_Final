@@ -7,9 +7,9 @@
     include ('database/prod_tamanho.php');
 
     $enc = new Encomenda();
-    $enc = clone(getCarrinho($_SESSION['username']));
+    $enc = clone(getCarrinho($_SESSION['userID']));
     
-    //include ('templates/header_cl.php');
+    include ('templates/header_cl.php');
     include ('templates/encomedna_edit.php');
     include ('templates/footer.php');
 ?>

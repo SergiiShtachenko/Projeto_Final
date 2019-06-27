@@ -33,7 +33,7 @@
     function redirect($userRole){
         //$location='produto_list_cl.php';
         if ($userRole == 1){
-            $location='clientsList.php';
+            $location='listaUsersVer.php';
         }else{
             if($userRole==0){
                 $location='produto_list_cl.php';
