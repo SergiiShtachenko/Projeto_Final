@@ -19,7 +19,7 @@
             
         
         public function getGuidEnc(){ return $this->_guidEnc; }
-        public function setGuidEnc($_guidEnc){ $this->__guidEnc = $_guidEnc; }
+        public function setGuidEnc($guidEnc){ $this->_guidEnc = $guidEnc; }
         public function setAutoGuidEnc(){ $this->_guidEnc = $this->gerarGuid(); }
         
         public function getLstTamanhos(){ return $this->_lstTamanhos; }

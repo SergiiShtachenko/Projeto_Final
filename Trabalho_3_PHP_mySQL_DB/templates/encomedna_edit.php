@@ -44,18 +44,17 @@
             <th width="50">46</th>
             <th width="50">47</th>
             <th width="50">48</th>
+            <th width="60">TOTAL</th>
+            <th width="90">VALOR</th>
         </tr> 
 <?php
     foreach($enc->getLstProd() as $item){
 ?>
+            
             <tr class="orProd"></tr>
                 <td><img class="showProd" src="images/produtos/<?php echo $item->getFoto() . '.jpg'; ?>"></td>
-                <td >                
-                    <h5><?php echo $item->getRef(); ?></h5>
-                </td> 
-                <td>                
-                    <h5><?php echo $item->getNome(); ?></h5>
-                </td>
+                <td > <h5><?php echo $item->getRef(); ?></h5> </td> 
+                <td> <h5><?php echo $item->getNome(); ?></h5> </td>
                 <form action="action_add_to_order.php" method="POST">
                     <input type="hidden" name="guidPr" value="<?php echo $item->getGuid(); ?>">
                     <input type="hidden" name="guidLn" value="<?php echo $item->getGuidEnc(); ?>">
@@ -74,6 +73,8 @@
                     <td><input class="orSize" name="T46" size=3 value="<?php if (isset($item->getLstTamanhos()['46'])) echo $item->getLstTamanhos()['46']; ?>"></td>
                     <td><input class="orSize" name="T47" size=3 value="<?php if (isset($item->getLstTamanhos()['47'])) echo $item->getLstTamanhos()['47']; ?>"></td>
                     <td><input class="orSize" name="T48" size=3 value="<?php if (isset($item->getLstTamanhos()['48'])) echo $item->getLstTamanhos()['48']; ?>"></td>
+                    <td> <h5><?php echo $item->getTotalQtd(); ?></h5> </td>
+                    <td> <h5><?php echo $item->getTotalVal(); ?></h5> </td>
                     <th> <input type="submit" value="Editar"></th>
                 </form>
                     <th  class="delProduto">

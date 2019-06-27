@@ -16,7 +16,7 @@
     }
     else{ // modo de alteração
         $itemPedido->setGuidEnc($_POST['guidLn']); 
-        delByGuid($_POST['guidLn']);
+        clearTamanho($_POST['guidLn']);
 
         $route = "Location: encomedna_edit.php"; 
     }    
@@ -46,13 +46,13 @@
     if($_POST['T47'] > 0) $itemPedido->addToLstProd('47', $_POST['T47']);
     if($_POST['T48'] > 0) $itemPedido->addToLstProd('48', $_POST['T48']);
 
-    updateCarinho($_SESSION['userID'], $itemPedido->getGuid(), $itemPedido->getGuidEnc(), $itemPedido->getTotalQtd(), $itemPedido->getPrice());
+    if($_POST['guidLn'] == "") updateCarinho($_SESSION['userID'], $itemPedido->getGuid(), $itemPedido->getGuidEnc(), $itemPedido->getTotalQtd(), $itemPedido->getPrice());
 
-    echo $itemPedido->getGuidEnc().'<br>';
+    //echo $itemPedido->getGuidEnc().'<br>';
 
     foreach($itemPedido->getLstTamanhos() as $size => $qtd){
         //echo "Tamanho $size tem $qtd <br>";
-        echo $itemPedido->getGuidEnc() .' tam-' . $size .' qtd-' . $qtd .'<br>';
+        //echo $itemPedido->getGuidEnc() .' tam-' . $size .' qtd-' . $qtd .'<br>';
         updateTamanho($itemPedido->getGuidEnc(), $size, $qtd);
         // $a =  $itemPedido->getGuidEnc();
         // echo "($a, $size, $qtd)";

@@ -1,47 +1,44 @@
 <?php
-    include ('../config/init.php');
-
+    // include ('../config/init.php');
+    // include ('../models/produto.php');
+    // include ('../models/encomenda.php');
+    // include ('../models/prd_tamano.php');
 
     function getCarrinho($user){
         global $dblink;
 
-        $stmt = $dblink->prepare('SELECT carrinha.guid, username, produto, tamanho, qtd, carrinha.regdate,   produto.price, reference, nome, foto  FROM carrinha LEFT JOIN produto ON produto=produto.guid WHERE username = ? ORDER BY carrinha.regdate');
+        $stmt = $dblink->prepare('SELECT produto, tamanho, carrinha.regdate,   produto.price, reference, nome, foto,  t35, t36, t37, t38, t39, t40, t41, t42, t43, t44, t45, t46, t47, t48  FROM carrinha LEFT JOIN produto ON produto=produto.guid LEFT JOIN tamanho ON tamanho.guid=tamanho  WHERE username = ? ORDER BY carrinha.regdate');
         $stmt->execute(array($user));
 
         //return $stmt->fetchAll();
         //$listaPr;
         $enc = new Encomenda();
         
-        $p = new PrdTamanho();
-        $p->setGuid("");
-
         while($row = $stmt->fetch()){
-            if($p->getGuid() != $row['produto']){
-                if($p->getGuid() != ""){
-                    $enc->addToLstProd($p);
-                    $p = new PrdTamanho();
-                }
-                $p->setGuidEnc($row['guid']);                 
-                $p->setGuid($row['produto']);
-                $p->setRef($row['reference']);
-                $p->setNome($row['nome']);
-                $p->setFoto($row['foto']);
-                $p->setPrice($row['price']);
+            $p = new PrdTamanho();               
+            $p->setGuid($row['produto']);
+            $p->setGuidEnc($row['tamanho']);
+            $p->setRef($row['reference']);
+            $p->setNome($row['nome']);
+            $p->setFoto($row['foto']);
+            $p->setPrice($row['price']);            
+            for($i = 35; $i<= 45; $i++){
+                $select = 't'.$i;
+                if($row[$select]>0) $p->addToLstProd($i, $row[$select]);
             }
-            $p->addToLstProd($row['tamanho'], $row['qtd']);
+            $enc->addToLstProd($p);
         }
+        
 
         return $enc;
     }
 
-    $size = 35;
-    $size = 't'.$size;
-    echo $size;
-    // $enc = new Encomenda();
     // $enc = clone(getCarrinho($_SESSION['userID']));
 
-    // $pr = $enc->getLstProd();
-    // echo $pr[0]->getGuidEnc();
+    // foreach($enc->getLstProd() as $item){
+    //     $i =1;
+    //     echo $item->getGuidEnc().' nr '.$i.'<br>';
+    // }
 
 
     

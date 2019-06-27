@@ -32,12 +32,28 @@
         return $confirm;
     }
 
+    function clearTamanho($guidTtamanhoguid){
+        global $dblink;
 
-    function delByGuid($guid){
+        for($i = 35; $i<= 45; $i++){
+            
+            $size = 't'.$i;
+
+            $stmt = $dblink->prepare("UPDATE tamanho SET $size = 0 WHERE guid = ?");
+            $confirm = $stmt->execute(array($guidTtamanhoguid));
+        }
+        
+        return $confirm;
+    }
+
+    function delLineByGuid($guid){
         global $dblink;        
 
         if($guid != ""){       
-            $stmt = $dblink->prepare('DELETE FROM carrinha WHERE guid = ?');
+            $stmt = $dblink->prepare('DELETE FROM carrinha WHERE tamanho = ?');
+            $confirm = $stmt->execute(array($guid));
+
+            $stmt = $dblink->prepare('DELETE FROM tamanho WHERE guid = ?');
             $confirm = $stmt->execute(array($guid));
         }
         else $confirm = "Produto não selecionado";

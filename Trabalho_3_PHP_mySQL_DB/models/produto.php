@@ -24,22 +24,22 @@ class Produto {
     public function setGuid($guid){ $this->_guid = $guid; }
     //Ref
     public function getRef(){  return $this->_ref; }
-    public function setRef($_ref){ $this->_ref = $_ref; }
+    public function setRef($ref){ $this->_ref = $ref; }
     //Nome
     public function getNome(){  return $this->_nome; }
-    public function setNome($_nome){ $this->_nome = $_nome; }
+    public function setNome($nome){ $this->_nome = $nome; }
     //Descrição
     public function getDescr(){ return $this->_descricao; }
-    public function setDescr($_descricao){ $this->_descricao = $_descricao; }
+    public function setDescr($descricao){ $this->_descricao = $descricao; }
     //Foto
     public function getFoto(){ return $this->_foto; }
-    public function setFoto($_foto){ $this->_foto = $_foto; }
+    public function setFoto($foto){ $this->_foto = $foto; }
     //Preço
     public function getPrice(){ return $this->_price; }
-    public function setPrice($_price){ $this->_price = $_price; }
+    public function setPrice($price){ $this->_price = $price; }
     //Ativo
     public function getAtivo(){ return $this->_ativo; }
-    public function setAtivo($_ativo){ $this->_ativo = $_ativo; }
+    public function setAtivo($ativo){ $this->_ativo = $ativo; }
 }
 
 
