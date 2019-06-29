@@ -31,9 +31,6 @@
             </aside>
             
         </section>
-        <footer>
-            Build by Sergii & Pedro
-        </footer>
     </body>
 </html>
 

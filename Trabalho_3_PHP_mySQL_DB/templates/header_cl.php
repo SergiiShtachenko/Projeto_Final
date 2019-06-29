@@ -20,7 +20,7 @@
             <nav class="topNav" id="topNavCL" role="navigation">            
                 <ul class="navConteiner">
                     <li class="navEl"><a class="navLink" href="produto_list_cl.php">Produtos</a></li>
-                    <li class="navEl"><a class="navLink" href="">Encomendas</a></li>
+                    <li class="navEl"><a class="navLink" href="encomenda_list_cl.php">Encomendas</a></li>
                     <li class="navEl"><a class="navLink" href="">Alterar dados</a></li>
                 </ul>
             </nav>

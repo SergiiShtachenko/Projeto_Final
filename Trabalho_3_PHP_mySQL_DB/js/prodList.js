@@ -16,7 +16,8 @@ function filtrar() {
     let input = document.getElementsByClassName("linhaDePesquisa")[0];
     let filter = input.value.toUpperCase();
     console.log(filter);
-    let table = document.getElementsByClassName("orProductList")[0];
+    let head = document.getElementsByClassName("head")[0];
+    let table = document.getElementById("tabSerch");
     console.log(table);
     let tr = table.getElementsByTagName("tr");
     for(let i = 0; i < tr.length; i++){
@@ -26,12 +27,13 @@ function filtrar() {
         if(txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = "";
         else tr[i].style.display = "none";
     }
-              
+    head.style.display = "";
 }
 
 function ordShow(ref){
     form = document.getElementById(ref+"_f");
     buttn = document.getElementById(ref+"_b");
+    tr = document.getElementById(ref+"_t");
 
     if(form.style.display == 'block'){
         form.style.display = 'none';
@@ -39,6 +41,7 @@ function ordShow(ref){
     } 
     else {
         form.style.display = 'block';
+        tr.style.display = "";
         buttn.style.display = 'none';
     }
 }

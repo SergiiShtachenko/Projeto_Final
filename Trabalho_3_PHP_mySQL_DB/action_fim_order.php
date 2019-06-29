@@ -20,6 +20,8 @@
 
     echo $report;
 
+    header ('Location: encomenda_list_cl.php');
+    
 
 
 

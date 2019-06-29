@@ -71,6 +71,38 @@
         return $confirm;
     }
 
+    function getAllEncomendas($cliente){
+        global $dblink;
+
+        $stmt = $dblink->prepare('SELECT encomenda.guid, dataencomenda, nrencomenda, dataentrega, utilizador.nome as utilizador_nom, cliente.nome as cleinte_nom, (SELECT COUNT(qtd) FROM enc_prod WHERE enc_prod.encomenda = encomenda.guid) AS nrmodelos, (SELECT SUM(qtd) FROM enc_prod WHERE enc_prod.encomenda = encomenda.guid) AS qtd, (SELECT SUM(qtd*price) FROM enc_prod WHERE enc_prod.encomenda = encomenda.guid) AS valor FROM encomenda LEFT JOIN utilizador ON responcavel = utilizador.guid LEFT JOIN cliente ON encomenda.cliente = cliente.guid WHERE encomenda.cliente = ? ORDER BY dataencomenda');
+        //$stmt = $dblink->prepare('SELECT * FROM encomenda WHERE cliente = ?');
+        $stmt->execute(array($cliente));
+        
+
+        while($row = $stmt->fetch()){
+            $enc = new Encomenda();
+            $enc->setGuid($row['guid']);
+            $enc->setDtEnc($row['dataencomenda']);
+            $enc->setNrEnc($row['nrencomenda']);
+            $enc->setDtEntr($row['dataentrega']);
+            $enc->setResponçavel($row['utilizador_nom']);
+            $enc->setCliente($row['cleinte_nom']);
+
+            $enc->setNrProd($row['nrmodelos']);
+            $enc->setQtdProd($row['qtd']);
+            $enc->setValProd($row['valor']);
+
+            $listaEnc[] = $enc;
+        }
+        return $listaEnc;
+    }
+    
+
+    // echo $_SESSION['idCliente'];
+    // $listaVer = getAllEncomendas($_SESSION['idCliente']);
+    // foreach($listaVer as $item){
+    //     echo $item->getNrEnc() . '<br>';
+    // }
     // $enc = clone(getCarrinho($_SESSION['userID']));
 
     // foreach($enc->getLstProd() as $item){

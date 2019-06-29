@@ -29,7 +29,7 @@
     
     <article class="pageNome">ESCOLHA O ARTIGO PARA ENCOMENDAR</article>
     
-    <table class="orProductList">   
+    <table id="tabSerch">   
 
 <?php
     foreach($listaVer as $item){
@@ -54,7 +54,7 @@
                             <button type="button" id="<?php echo $item->getRef(); ?>_b" onclick="ordShow('<?php echo $item->getRef(); ?>')">Encomendar</button>
                         </td>                    
                 </tr>
-                <tr class="tamanhos">
+                <tr id="<?php echo $item->getRef(); ?>_t" class="tamanhos">
                     <td colspan="5">
                         <form class="tmnForm" id="<?php echo $item->getRef(); ?>_f" action="action_add_to_order.php" method="POST">
                             <input type="hidden" name="guidPr" value="<?php echo $item->getGuid(); ?>">

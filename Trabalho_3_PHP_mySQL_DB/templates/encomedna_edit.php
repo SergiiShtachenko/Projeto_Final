@@ -29,7 +29,7 @@
         </tr>
     </form>
     </table>
-    <table class="itens">
+    <table id="tabSerch" class="itens">
         <tr class="head">
             <th>Imagem</th>
             <th width="80">Ref.</th>

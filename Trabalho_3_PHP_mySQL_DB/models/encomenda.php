@@ -8,6 +8,9 @@ class Encomenda {
     private $_nrEncomenda;
     private $_responcavel;
     private $_cliente;
+    private $_nrProd;
+    private $_qtdProd;
+    private $_valProd;
     private $_lstProdutos;
 
     public function __construct(){
@@ -19,7 +22,7 @@ class Encomenda {
     public function setGuid($guid){ $this->_guid = $guid; }
 
     public function getDtEnc(){ return $this->_dataEncomenda; }
-    public function SetDtEnc($data){ $this->_dataEncomenda = $data; }
+    public function setDtEnc($data){ $this->_dataEncomenda = $data; }
 
     public function getDtEntr(){ return $this->_dataEntrega; }
     public function setDtEntr($data){ $this->_dataEntrega = $data; }
@@ -32,6 +35,15 @@ class Encomenda {
 
     public function getCliente(){ return $this->_cliente; }
     public function setCliente($_cliente){ $this->_cliente = $_cliente; }
+
+    public function getNrProd(){ return $this->_nrProd; }
+    public function setNrProd($nrProd){ $this->_nrProd = $nrProd; }
+
+    public function getQtdProd(){ return $this->_qtdProd; }
+    public function setQtdProd($qtdProd){ $this->_qtdProd = $qtdProd; }
+
+    public function getValProd(){ return $this->_valProd; }
+    public function setValProd($valProd){ $this->_valProd = $valProd; }
 
     public function getLstProd(){ return $this->_lstProdutos; }
     public function addToLstProd($PrdTamanho){ $this->_lstProdutos[] = $PrdTamanho; }

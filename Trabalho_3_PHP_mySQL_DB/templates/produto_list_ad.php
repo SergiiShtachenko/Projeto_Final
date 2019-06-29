@@ -30,7 +30,7 @@
     </table>
     
     
-    <table class="orProductList">   
+    <table id="tabSerch">   
 <?php
     foreach($listaVer as $item){
         if($item->getAtivo()){
