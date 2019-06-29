@@ -1,15 +1,17 @@
 <?php    
+include ('../config/init.php');
 
 function saveNewUser(){
-  include ('../config/init_p.php');
+  // include ('../config/init.php');
 
- 
+   
   $email=$_POST['email'];
   $palavrapasse=$_POST['password'];
   $nome=$_POST['nome'];
   $nifEmpresa=$_POST['nif'];
   $telefone=$_POST['Telefone'];
- 
+  
+  global $dblink;
 
   //teste se passa valores para página
   //echo $email, $palavrapasse, $nome, $telefone;
@@ -26,4 +28,5 @@ function saveNewUser(){
 
 saveNewUser();
 echo "Registo criado com sucesso!";
+header('Location: listaUsersVer.php');
 ?>

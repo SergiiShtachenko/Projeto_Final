@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="../css/registo.css">
         <script src="js/registo.js" defer></script>
  
-<section class="RegistoNovoUser">
+<section  style="margin-top: 120px;" class="RegistoNovoUser">
       
         <article id="NovoUser">
-            <form name="registoUtilizador" action="../database/novoUser.php" method="POST">
+            <form name="registoUtilizador" action="database/novoUser.php" method="POST">
                 <p class="Username">
                    <input type="email" name="email" placeholder="Email *"required="preenchimento obrigatório"></p>
                 <p class="Password">

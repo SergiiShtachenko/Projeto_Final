@@ -4,7 +4,13 @@
     include ('models/produto.php');
     include ('database/produto.php');
 
-    if (!isset($_SESSION['userID'])) die;
+    // Segurança
+    include ('database/user.php');
+    //  verifivar sessão               verificar admin
+    if (!isset($_SESSION['userID']) || verifyAdmin($_SESSION['userID']) != 1){
+        header ('Location: Logout.php');
+        die;
+    }
 
     
     $confirm = deleteProduto($_POST['guidPr']);

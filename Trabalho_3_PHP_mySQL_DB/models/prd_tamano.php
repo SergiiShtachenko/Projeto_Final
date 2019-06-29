@@ -4,7 +4,7 @@
 
 
     class PrdTamanho extends Produto{
-        private $_guidEnc;
+        private $_guidEnc;// ref ta tabela de tamanhos
         private $_lstTamanhos = array();
 
         // public function __construct($produto){ // artibutos do pai

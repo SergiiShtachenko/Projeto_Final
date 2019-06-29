@@ -1,8 +1,10 @@
 <?php    
 
-function saveNewUser(){
-  include ('config/init_p.php');
+include ('../config/init.php');
 
+function saveNewUser(){
+ 
+  global $dblink;
  
   $email=$_POST['email'];
   $palavrapasse=$_POST['password'];
@@ -26,4 +28,5 @@ function saveNewUser(){
 
 saveNewUser();
 echo "Registo criado com sucesso!";
+header('Location: listaUsersVer.php');
 ?>

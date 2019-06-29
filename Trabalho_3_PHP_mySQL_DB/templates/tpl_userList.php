@@ -18,7 +18,8 @@
 <section style="margin-top: 60px;">
    <br>
    <br> 
-  <h1>Utilizadores</h1>
+  <h1>Utilizadores  </h1>
+  <a href="criarUses.php"> Criara novo</a>
   <table id="clients">
   <tr>
   <th><input type="text" id="Morada" placeholder="Email"></th>

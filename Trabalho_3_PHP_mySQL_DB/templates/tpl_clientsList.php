@@ -17,6 +17,7 @@
 <br>
    <br> <br> <br> <br> 
   <h1>Clientes</h1>
+  <a href="criarCliente.php"> Criara novo</a>
   <table id="clients">
   <tr>
   <th><input type="text" id="Nome" onkeyup="procuraNome()" placeholder="Nome"></th>

@@ -18,7 +18,7 @@
             $confirm = $stmt->execute(array($user, $prod, $guidTtamanho, $qtd, $price, $guidTtamanho));
         }
         return $confirm;
-    }
+    }   
 
     function updateTamanho($guidTtamanho, $size, $qtd){
         global $dblink;
@@ -35,7 +35,7 @@
     function clearTamanho($guidTtamanhoguid){
         global $dblink;
 
-        for($i = 35; $i<= 45; $i++){
+        for($i = 35; $i<= 48; $i++){
             
             $size = 't'.$i;
 

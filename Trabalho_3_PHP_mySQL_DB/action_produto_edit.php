@@ -3,10 +3,15 @@
     include ('config/init.php');
     include ('models/produto.php');
     include ('database/produto.php');
+    include ('database/user.php');
 
-    //echo $_POST['descPr'] . ' ou nada';
-
-    if (!isset($_SESSION['userID'])) die;
+    // Segurança
+    include ('database/user.php');
+    //  verifivar sessão               verificar admin
+    if (!isset($_SESSION['userID']) || verifyAdmin($_SESSION['userID']) != 1){
+        header ('Location: Logout.php');
+        die;
+    }
 
     $prod = new Produto();
     $prod->setGuid($_POST['guidPr']);

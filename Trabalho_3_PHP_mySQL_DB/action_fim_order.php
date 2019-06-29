@@ -11,6 +11,19 @@
 
     $enc = new Encomenda();
     $enc = clone(getCarrinho($_SESSION['userID']));
+    $enc->setNrEnc($_POST['nrEnc']);
+    $enc->setDtEntr($_POST['data']);
+    $enc->setResponçavel($_SESSION['userID']);
+    $enc->setCliente($_SESSION['idCliente']);
+
+    $report = saveEnc(clone($enc), 0);
+
+    echo $report;
+
+
+
+
+
 
     
 
