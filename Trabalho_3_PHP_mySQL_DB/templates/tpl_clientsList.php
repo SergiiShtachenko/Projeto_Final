@@ -34,7 +34,7 @@
 ?>
 
 
-    <table class="clientList">
+    <table id="tabSerch" class="clientList">
         <tr><td><h3><?php echo $item->getNomeCliente(); ?></h3></td>
                 <td><?php echo $item->getNif(); ?></td>
                 <td><?php echo $item->getMorada(); ?></td>                      

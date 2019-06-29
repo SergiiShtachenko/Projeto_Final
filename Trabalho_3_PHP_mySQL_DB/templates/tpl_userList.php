@@ -34,7 +34,7 @@
 ?>
 
 
-    <table class="clientList">
+    <table id="tabSerch" class="clientList">
         <tr><td><h3><?php echo $item->getEmail(); ?></h3></td>
                 <td><h3><?php echo $item->getNome(); ?></h3></td>                
                 <td><h3><?php echo $item->getTelefon(); ?></h3></td>
