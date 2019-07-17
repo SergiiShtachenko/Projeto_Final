@@ -3,7 +3,6 @@
     include ('config/init.php');
     include ('models/produto.php');
     include ('database/produto.php');
-    include ('database/user.php');
 
     // Segurança
     include ('database/user.php');
